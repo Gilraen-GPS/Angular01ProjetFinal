@@ -1,0 +1,20 @@
+nav {
+    background-color: #e3f2fd;
+    border-radius: 5px;
+}
+
+.col-2 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 25px;
+    max-width: 215px;
+    margin-right: 75px;
+}
+
+img {
+    width: 25px; 
+    height: auto; 
+    margin-top: 10px;
+}
