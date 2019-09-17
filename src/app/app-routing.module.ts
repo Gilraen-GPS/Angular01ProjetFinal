@@ -41,10 +41,11 @@ import { UpdateVisiteComponent } from './components/visite/update-visite/update-
 import { DeleteVisiteComponent } from './components/visite/delete-visite/delete-visite.component';
 import { GetByIdVisiteComponent } from './components/visite/get-by-id-visite/get-by-id-visite.component';
 import { GetAllVisiteComponent } from './components/visite/get-all-visite/get-all-visite.component';
+import { LoginComponent } from './security/login';
 
 
 const routes: Routes = [
-  {path:"", component:AccueilComponent},
+  {path:"", component:LoginComponent},
   {path:"welcome", component:AccueilComponent},
 
   {path:"aAcheter/add", component:AddAAcheterComponent},
