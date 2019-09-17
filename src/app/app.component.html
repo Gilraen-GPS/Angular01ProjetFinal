@@ -1,3 +1,35 @@
+<<<<<<< HEAD
 <app-header></app-header>
+<app-carousel></app-carousel> 
 <router-outlet></router-outlet>
 <app-footer></app-footer>
+=======
+<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/">Home</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+    </div>
+</nav>
+
+<!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- credits -->
+<div class="text-center">
+    <p>
+        <a href="http://jasonwatmore.com/post/2018/11/16/angular-7-jwt-authentication-example-tutorial" target="_top">Angular 7 - JWT Authentication Example & Tutorial</a>
+    </p>
+    <p>
+        <a href="http://jasonwatmore.com" target="_top">JasonWatmore.com</a>
+    </p>
+</div>
+>>>>>>> 19ccbe7fe02877169436a8d28144f9183d9df137

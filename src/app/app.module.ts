@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
+import { CarouselComponent } from './carousel/carousel.component'; 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -9,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+
 import { AddClientComponent } from './components/client/add-client/add-client.component';
 import { DeleteClientComponent } from './components/client/delete-client/delete-client.component';
 import { UpdateClientComponent } from './components/client/update-client/update-client.component';
@@ -51,11 +53,23 @@ import { GetByIdContratComponent } from './components/contrat/get-by-id-contrat/
 import { GetAllContratComponent } from './components/contrat/get-all-contrat/get-all-contrat.component';
 import { FooterComponent } from './footer/footer.component';
 import { AccueilComponent } from './accueil/accueil.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
+
+
+
+import { routing } from './app.routing';
+
+import { JwtInterceptor, ErrorInterceptor } from './security/_helpers';
+import { HomeComponent } from './security/home';
+import { LoginComponent } from './security/login';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
+    LoginComponent,
+
     HeaderComponent,
     AddClientComponent,
     DeleteClientComponent,
@@ -98,7 +112,8 @@ import { HttpClientModule } from '@angular/common/http';
     GetByIdContratComponent,
     GetAllContratComponent,
     FooterComponent,
-    AccueilComponent
+    AccueilComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -109,9 +124,15 @@ import { HttpClientModule } from '@angular/common/http';
     ModalModule.forRoot(),
     ReactiveFormsModule,
     HttpClientModule, 
-    FormsModule
+    FormsModule,
+    routing
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
