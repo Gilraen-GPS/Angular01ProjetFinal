@@ -15,7 +15,7 @@ export class GetAllContratComponent implements OnInit {
 
   ngOnInit() {
     this.contratService.getAllContrat().subscribe(data=>{
-      this.contrats=data
+      this.contrats=data;
     });
   }
 

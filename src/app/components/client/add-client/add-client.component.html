@@ -9,30 +9,24 @@
     <div class="card-body px-lg-5 pt-0">
 
         <!-- Form -->
-        <form class="text-center" style="color: #757575;" action="#!" (submit)="ajouterClient()">
+        <form class="text-center" style="color: #757575;" action="#!" (submit)="ajouterContrat()">
 
+          
             <div class="form-group" >
-                <label for="idNomCl">Nom du Client</label>
-                <input type="text" class="form-control" id="idNomCl" placeholder="Nom du Client" [(ngModel)]="client.nomPersonne" name="pNomCl"/>
+                <label for="idPrixContrat">Téléphone Privé</label>
+                <input type="number" class="form-control" id="idPrixContrat" placeholder="Prix du contrat" [(ngModel)]="contrat.prixContrat" name="pPrixContrat"/>
             </div>
             <div class="form-group" >
-                <label for="idTelCl">Téléphone Privé</label>
-                <input type="text" class="form-control" id="idTelCl" placeholder="Téléphone Privé" [(ngModel)]="client.telephonePrive" name="pTelCl"/>
+                <label for="idDateTransactionContrat">Aquereur</label>
+                <input type="text" class="form-control" id="idDateTransactionContrat" placeholder="Date de la Transaction" [(ngModel)]="contrat.dateTransactionContrat" name="pDateTransactionContrat"/>
             </div>
-            <div class="form-group" >
-                <label for="idAcquereur">Aquereur</label>
-                <input type="text" class="form-control" id="idAcquereur" placeholder="Acquereur" [(ngModel)]="client.acquereur" name="pAcquereur"/>
-            </div>
-            <div class="form-group" >
-                <label for="idAdresseCl">Poids maximal</label>
-                <input type="text" class="form-control" id="idAdresseCl" placeholder="Adresse du client" [(ngModel)]="client.adresseClient" name="pAdresseCl"/>
-            </div>
+           
            
 
 
 
             <!-- Sign up button -->
-            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Ajouter le client</button>
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Ajouter le contrat</button>
         </form>
         <!-- Form -->
 
