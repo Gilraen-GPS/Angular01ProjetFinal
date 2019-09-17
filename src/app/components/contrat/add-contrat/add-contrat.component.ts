@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+
+
+
+
 @Component({
   selector: 'app-add-contrat',
   templateUrl: './add-contrat.component.html',
@@ -7,9 +11,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddContratComponent implements OnInit {
 
+  
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  
 
 }
