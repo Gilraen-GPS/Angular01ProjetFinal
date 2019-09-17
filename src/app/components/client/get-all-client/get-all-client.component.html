@@ -1,1 +1,25 @@
-<p>get-all-client works!</p>
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Téléphone Privé</th>
+        <th scope="col">Adresse</th>
+        <th scope="col">Aquereur</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cl of client">
+          <th scope="row">{{cl.idPersonne}}</th>
+          <td>{{cl.nomPersonne}}</td>
+          <td>{{cl.telephonePrive}}</td>
+          <td>{{cl.acquereur}}</td>
+          <td>{{cl.adresseClient}}</td>
+          <td></td>
+        </tr>
+    </tbody>
+  </table>
+
+  <button [routerLink]="['/client/add']">Ajouter Client</button>

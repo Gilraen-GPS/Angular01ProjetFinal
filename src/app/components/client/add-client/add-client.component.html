@@ -1,1 +1,42 @@
-<p>add-client works!</p>
+<!-- Material form register -->
+<div class="card" id="login">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Ajouter un Client</strong>
+    </h5>
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" action="#!" (submit)="ajouterClient()">
+
+            <div class="form-group" >
+                <label for="idNomCl">Nom du Client</label>
+                <input type="text" class="form-control" id="idNomCl" placeholder="Nom du Client" [(ngModel)]="client.nomPersonne" name="pNomCl"/>
+            </div>
+            <div class="form-group" >
+                <label for="idTelCl">Téléphone Privé</label>
+                <input type="text" class="form-control" id="idTelCl" placeholder="Téléphone Privé" [(ngModel)]="client.telephonePrive" name="pTelCl"/>
+            </div>
+            <div class="form-group" >
+                <label for="idAcquereur">Aquereur</label>
+                <input type="text" class="form-control" id="idAcquereur" placeholder="Acquereur" [(ngModel)]="client.acquereur" name="pAcquereur"/>
+            </div>
+            <div class="form-group" >
+                <label for="idAdresseCl">Poids maximal</label>
+                <input type="text" class="form-control" id="idAdresseCl" placeholder="Adresse du client" [(ngModel)]="client.adresseClient" name="pAdresseCl"/>
+            </div>
+           
+
+
+
+            <!-- Sign up button -->
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Ajouter le client</button>
+        </form>
+        <!-- Form -->
+
+    </div>
+
+</div>
+<!-- Material form register --> 
