@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
+import { CarouselComponent } from './carousel/carousel.component'; 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -53,6 +54,8 @@ import { FooterComponent } from './footer/footer.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,7 +101,8 @@ import { HttpClientModule } from '@angular/common/http';
     GetByIdContratComponent,
     GetAllContratComponent,
     FooterComponent,
-    AccueilComponent
+    AccueilComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
