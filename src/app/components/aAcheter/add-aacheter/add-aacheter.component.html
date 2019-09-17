@@ -1,1 +1,68 @@
-<p>add-aacheter works!</p>
+<!-- Material form register -->
+<div class="card" id="login">
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Ajouter un bien à vendre</strong>
+    </h5>
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;">
+            <div class="form-row">
+                <div class="col">
+                    <!-- First name -->
+                    <div class="md-form text-info waves-effect z-depth-0">
+                        <label for="materialRegisterFormFirstName">Statut Bien Immobilier</label>
+                        <input type="text" id="materialRegisterFormFirstName" class="form-control" [(ngModel)]="aAcheter.statutBienImmobilier" name="statutBienImmobilier">
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- Last name -->
+                    <div class="md-form text-info">
+                        <label for="materialRegisterFormLastName">Date de Soumission</label>
+                        <input type="text" id="materialRegisterFormLastName" class="form-control" [(ngModel)]="aAcheter.dateSoumissionBienImmobilier" name="dateSoumissionBienImmobilier">
+                    </div>
+                </div>
+            </div>
+            <!-- Password -->
+            <div class="form-row">
+                <div class="col">
+                    <div class="md-form text-info">
+                        <label for="materialRegisterFormPassword">Localisation du bien</label>
+                        <input type="text" id="materialRegisterFormPassword" class="form-control"
+                            aria-describedby="materialRegisterFormPasswordHelpBlock" [(ngModel)]="aAcheter.localisationBienImmobilier" name="localisationBienImmobilier">
+                    </div>
+                </div>
+                <!-- Phone number -->
+                <div class="col">
+                    <div class="md-form text-info">
+                        <label for="materialRegisterFormPhone">Photo</label>
+                        <input type="text" id="materialRegisterFormPhone" class="form-control"
+                            aria-describedby="materialRegisterFormPhoneHelpBlock" [(ngModel)]="aAcheter.photo" name="photo">
+                    </div>
+                </div>
+            </div>
+            <!-- E-mail -->
+            <div class="form-row">
+                    <div class="col">
+                        <div class="md-form text-info">
+                            <label for="materialRegisterFormPassword">Prix du bien</label>
+                            <input type="number" id="materialRegisterFormPassword" class="form-control"
+                                aria-describedby="materialRegisterFormPasswordHelpBlock" [(ngModel)]="aAcheter.prixDemandeAAcheter" name="prixDemandeAAcheter">
+                        </div>
+                    </div>
+                    <!-- Phone number -->
+                    <div class="col">
+                        <div class="md-form text-info">
+                            <label for="materialRegisterFormPhone">Etat du bien</label>
+                            <input type="text" id="materialRegisterFormPhone" class="form-control"
+                                aria-describedby="materialRegisterFormPhoneHelpBlock" [(ngModel)]="aAcheter.etatAAcheter" name="etatAAcheter">
+                        </div>
+                    </div>
+                </div>
+            <!-- Sign up button -->
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" (click)="ajouter()">Ajouter le bien</button>
+        </form>
+        <!-- Form -->
+    </div>
+</div>
+<!-- Material form register -->
