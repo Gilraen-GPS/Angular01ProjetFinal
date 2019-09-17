@@ -6,20 +6,19 @@
         <th scope="col">ID</th>
         <th scope="col">Nom</th>
         <th scope="col">Téléphone Privé</th>
+        <th scope="col">Acquéreur</th>
         <th scope="col">Adresse</th>
-        <th scope="col">Aquereur</th>
+        <th scope="col">Opérations</th>
       </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let cl of client">
-          <th scope="row">{{cl.idPersonne}}</th>
-          <td>{{cl.nomPersonne}}</td>
-          <td>{{cl.telephonePrive}}</td>
-          <td>{{cl.acquereur}}</td>
-          <td>{{cl.adresseClient}}</td>
-          <td></td>
+        <tr *ngFor="let client of clients">
+          <th scope="row">{{client.idPersonne}}</th>
+          <td>{{client.nomPersonne}}</td>
+          <td>{{client.telephonePrive}}</td>
+          <td>{{client.acquereur}}</td>
+          <td>{{client.adresseClient}}</td>
+          <td><a (click)="naviguer(client)" >Supprimer</a> | <a [routerLink]="['/client/update']" [queryParams]="{pIdPersonne:client.idPersonne}" >Modifier</a></td>
         </tr>
     </tbody>
   </table>
-
-  <button [routerLink]="['/client/add']">Ajouter Client</button>

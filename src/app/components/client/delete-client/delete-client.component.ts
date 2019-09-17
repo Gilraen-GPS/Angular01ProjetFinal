@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ClientService } from 'src/app/services/client.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-delete-client',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./delete-client.component.css']
 })
 export class DeleteClientComponent implements OnInit {
-
-  constructor() { }
+  idPersonne:number;
+  constructor(private clientService:ClientService, private router:Router) { }
 
   ngOnInit() {
   }
+
+  supprimerContrat(){
+  this.clientService.deleteClient(this.idPersonne).subscribe(reponse => { if (reponse.status == 200)
+    { this.router.navigate(['/welcome']);
+  }
+});
+  
+
+}
 
 }

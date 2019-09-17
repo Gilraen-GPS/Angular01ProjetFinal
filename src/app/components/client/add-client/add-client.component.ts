@@ -10,21 +10,22 @@ import { Router } from '@angular/router';
 })
 export class AddClientComponent implements OnInit {
 
-  client : Client = new Client();
-  constructor(private clService : ClientService , private router: Router) { }
+  client:Client  =new Client;
+
+  constructor(private clientService:ClientService, private router:Router) { }
 
   ngOnInit() {
-    
   }
+
+  
   ajouterClient(){
-    this.clService.addClient(this.client).subscribe(clOut =>{
-      if(clOut.idPersonne != 0){
-        //si,letudiant est ajouter aller vers accueil 
-          this.router.navigate(["/client/getAll"])
-      }
-    })
-  }
+    this.clientService.addClient(this.client).subscribe((cOut) => { if (cOut!=null) {
+                          this.router.navigate(["/welcome"])
+                  }}
+                  );
+                }
+                
 
-
+  
 
 }

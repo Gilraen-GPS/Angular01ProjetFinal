@@ -1,1 +1,31 @@
-<p>delete-client works!</p>
+<!-- Material form register -->
+<div class="card" id="login">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Supprimer un Client</strong>
+    </h5>
+  
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+  
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" action="#!" (submit)="supprimerClient()">
+  
+            <div class="form-group" >
+                <label for="idPersonne">#ID contrat</label>
+                <input type="number" class="form-control" id="idPersonne" placeholder="ID du client" [(ngModel)]="idPersonne" name="pIdPersonne"/>
+            </div>
+                 
+           
+  
+  
+  
+            <!-- Sign up button -->
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Supprimer le client</button>
+        </form>
+        <!-- Form -->
+  
+    </div>
+  
+  </div>
+  <!-- Material form register --> 

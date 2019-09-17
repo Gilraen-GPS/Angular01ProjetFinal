@@ -1,1 +1,58 @@
-<p>get-by-id-client works!</p>
+<!-- Material form register -->
+<div class="card" id="login">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Rechercher un Client</strong>
+    </h5>
+  
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+  
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" action="#!" (submit)="rechercherClient()">
+  
+            <div class="form-group" >
+                <label for="idClient">#ID client</label>
+                <input type="number" class="form-control" id="idClient" placeholder="ID du client" [(ngModel)]="idClient" name="pId"/>
+            </div>
+                 
+           
+  
+  
+  
+            <!-- Sign up button -->
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Rechercher le client</button>
+        </form>
+        <!-- Form -->
+  
+    </div>
+  
+  </div>
+  <!-- Material form register --> 
+  <div  *ngIf="indice">
+  <h3>Client recherché</h3>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Téléphone Privé</th>
+        <th scope="col">Adresse</th>
+        <th scope="col">Aquereur</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <th>{{client.idPersonne}}</th>
+          <td>{{client.nomPersonne}}</td>
+          <td>{{client.telephonePrive}}</td>
+          <td>{{client.acquereur}}</td>
+          <td>{{client.adresseClient}}</td>
+        </tr>
+    </tbody>
+  </table>
+
+  <div  *ngIf="indice2"><p>Le client n'existe pas</p>
+  </div>
+

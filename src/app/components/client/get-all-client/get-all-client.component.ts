@@ -10,24 +10,24 @@ import { Client } from 'src/app/modeles/client';
 })
 export class GetAllClientComponent implements OnInit {
 
-  client: any;
+  clients: any;
   
-  idClient: number;
+  idPersonne: number;
  
-  constructor(private clService: ClientService,  private router: Router) { }
+  constructor(private clientService: ClientService,  private router: Router) { }
 
+  
+  naviguer(client:Client){
+    this.clientService.deleteClient(client.idPersonne).subscribe(reponse => { if (reponse.status == 200)
+      { this.clients=this.clients.filter( cList => cList!=client)
+    }
+  });
+    
+  
+  }
   ngOnInit() {
-    this.clService.getAllClient().subscribe(data => { this.client = data; });
+    this.clientService.getAllClient().subscribe(data => { this.clients = data; });
     
   }
-
-  /*supprimerCl(cl: Client) {
-    this.clService.deleteClient(cl.idClient).subscribe(reponse => {
-      //si,la carg est ajouter aller vers accueil 
-      if (reponse.status === 200) {
-        this.client = this.client.filter(clList => clList !== cl)
-      }
-    });
-  }*/
 
 }

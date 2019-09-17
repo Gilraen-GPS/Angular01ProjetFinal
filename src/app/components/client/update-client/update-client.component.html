@@ -1,1 +1,48 @@
-<p>update-client works!</p>
+<!-- Material form register -->
+<div class="card" id="login">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Modifier un Client</strong>
+    </h5>
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" action="#!" (submit)="modifierClient()">
+
+            <div class="form-group" >
+                <label for="idClient">#ID du client</label>
+                <input type="number" class="form-control" id="idClient" placeholder="ID du client" [(ngModel)]="client.idPersonne" name="pIdPersonne"/>
+            </div>
+            <div class="form-group" >
+                <label for="idNomPersonne">Nom du client</label>
+                <input type="text" class="form-control" id="idNomPersonne" placeholder="Nom du client" [(ngModel)]="client.nomPersonne" name="pNomPersonne"/>
+            </div>
+            <div class="form-group" >
+                <label for="idTelephonePrive">Téléphone Privé</label>
+                <input type="number" class="form-control" id="idTeleponePrive" placeholder="Numéro du téléphone" [(ngModel)]="client.telephonePrive" name="pTelephonePrive"/>
+            </div>
+            <div class="form-group" >
+                <label for="idAcquereur">Acquéreur ?</label>
+                <input type="number" class="form-control" id="idAcquereur" placeholder="0 non ; 1 oui" [(ngModel)]="client.acquereur" name="pAcquereur"/>
+            </div>
+            <div class="form-group" >
+                <label for="idAdresseClient">Adresse du client</label>
+                <input type="number" class="form-control" id="idAdresseClient" placeholder="Adresse du client" [(ngModel)]="client.adresseClient" name="pAdresse"/>
+            </div>
+            
+           
+           
+
+
+
+            <!-- Sign up button -->
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Modifier le client</button>
+        </form>
+        <!-- Form -->
+
+    </div>
+
+</div>
+<!-- Material form register --> 
