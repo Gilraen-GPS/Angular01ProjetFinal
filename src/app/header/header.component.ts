@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../security/_services/authentication.service';
+import { AppComponent } from '../app.component';
 
 
 @Component({
@@ -8,13 +9,20 @@ import { AuthenticationService } from '../security/_services/authentication.serv
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  constructor(private authenticationService: AuthenticationService) { }
+  constructor(
+    private authenticationService: AuthenticationService,
+    private appComponent : AppComponent
+    ) { }
 
   ngOnInit() {
   }
 
   logOut(){
     this.authenticationService.logout();
+  }
+
+  indiceFalse(){
+    this.appComponent.indice = false;
   }
 
 }

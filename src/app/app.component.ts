@@ -8,6 +8,7 @@ import { User } from './security/_models';
 @Component({ selector: 'app', templateUrl: 'app.component.html' })
 export class AppComponent {
     currentUser: User;
+    indice : boolean = false;
 
     constructor(
         private router: Router,
@@ -19,5 +20,9 @@ export class AppComponent {
     logout() {
         this.authenticationService.logout();
         this.router.navigate(['/login']);
+    }
+
+    indiceTrue(){
+        this.indice=true;
     }
 }

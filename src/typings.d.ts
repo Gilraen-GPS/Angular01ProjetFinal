@@ -1,2 +1,2 @@
 // so the typescript compiler doesn't complain about the global config object
-declare var config: any;
+declare const config: {apiUrl : string = 'http://localhost:4200/'}

@@ -6,4 +6,15 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
+  padding-bottom: 200px;
+}
+
+@font-face {
+  font-family: 'amsterdamFont';
+  src: url('assets/fonts/Amsterdam-VwYy.ttf');
+}
+
+@font-face {
+  font-family: 'diamondFont';
+  src: url('assets/fonts/Diamond Dust - PERSONAL USE ONLY.ttf');
 }
