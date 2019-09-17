@@ -14,7 +14,20 @@ nav {
 }
 
 img {
-    width: 25px; 
+    width: 70px; 
     height: auto; 
-    margin-top: 10px;
+    margin: 0px;
+}
+
+#deconnect {
+    height: 30px;
+    width: auto;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+#deconnect1{
+    margin-right: 0px;
+    right: 0px; 
+    position: absolute;
 }
