@@ -63,6 +63,7 @@ import { routing } from './app.routing';
 import { JwtInterceptor, ErrorInterceptor } from './security/_helpers';
 import { HomeComponent } from './security/home';
 import { LoginComponent } from './security/login';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -113,7 +114,8 @@ import { LoginComponent } from './security/login';
     GetAllContratComponent,
     FooterComponent,
     AccueilComponent,
-    CarouselComponent
+    CarouselComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
