@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
 import { CarouselComponent } from './carousel/carousel.component'; 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -64,6 +64,9 @@ import { JwtInterceptor, ErrorInterceptor } from './security/_helpers';
 import { HomeComponent } from './security/home';
 import { LoginComponent } from './security/login';
 import { NavbarComponent } from './navbar/navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+
 
 @NgModule({
   declarations: [
@@ -127,7 +130,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     ReactiveFormsModule,
     HttpClientModule, 
     FormsModule,
-    routing
+    routing,
+    BrowserAnimationsModule, 
+    DragDropModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
@@ -135,6 +140,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 
     
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

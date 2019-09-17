@@ -31,10 +31,4 @@ export class GetAllContratComponent implements OnInit {
     });
   }
 
-  get contrats1(): Country[] {
-       return this.contrats
-        .map((contrat, i) => ({ id: i + 1, ...contrat }))
-        .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
-     }
-
 }
