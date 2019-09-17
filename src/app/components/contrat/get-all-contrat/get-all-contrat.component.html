@@ -1,5 +1,4 @@
-<h3>Liste des contrats</h3>
-<table>
+<!-- <table>
     <tr>
         <th>#ID Contrat</th>
         <th>Prix Contrat</th>
@@ -10,4 +9,25 @@
         <td>{{c.prixContrat}}</td>
         <td>{{c.dateTransactionContrat}}</td>
     </tr>
+</table> -->
+
+<h3>Liste des contrats</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#ID Contrat</th>
+            <th scope="col">Prix Contrat</th>
+            <th scope="col">Date de la Transaction</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let contrat of contrats">
+            <td>{{contrat.idContrat}}</td>
+            <td>{{contrat.prixContrat}}</td>
+            <td>{{contrat.dateTransactionContrat}}</td>
+        </tr>
+    </tbody>
 </table>
+
+<ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="contrats.length"></ngb-pagination>

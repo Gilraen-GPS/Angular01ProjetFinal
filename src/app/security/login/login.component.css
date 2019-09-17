@@ -1,0 +1,32 @@
+#login {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+h5 {
+    background-color: #e3f2fd;
+}
+
+.form-group {
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.md-form {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-family: 'amsterdamFont';
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+label {
+    font-family: 'diamondFont';
+}
