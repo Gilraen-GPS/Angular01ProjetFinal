@@ -1,1 +1,54 @@
-<p>get-by-id-contrat works!</p>
+<!-- Material form register -->
+<div class="card" id="login">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Rechercher un Contrat</strong>
+    </h5>
+  
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+  
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" action="#!" (submit)="rechercherContrat()">
+  
+            <div class="form-group" >
+                <label for="idContrat">#ID contrat</label>
+                <input type="number" class="form-control" id="idContrat" placeholder="ID du contrat" [(ngModel)]="idContrat" name="pId"/>
+            </div>
+                 
+           
+  
+  
+  
+            <!-- Sign up button -->
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Rechercher le contrat</button>
+        </form>
+        <!-- Form -->
+  
+    </div>
+  
+  </div>
+  <!-- Material form register --> 
+  <div  *ngIf="indice">
+  <h3>Contrat recherché</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#ID Contrat</th>
+            <th scope="col">Prix Contrat</th>
+            <th scope="col">Date de la Transaction</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{contrat.idContrat}}</td>
+            <td>{{contrat.prixContrat}}</td>
+            <td>{{contrat.dateTransactionContrat}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div  *ngIf="indice2"><p>Le contrat n'existe pas</p>
+</div>

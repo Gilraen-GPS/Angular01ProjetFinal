@@ -19,6 +19,7 @@
             <th scope="col">#ID Contrat</th>
             <th scope="col">Prix Contrat</th>
             <th scope="col">Date de la Transaction</th>
+            <th scope="col">Opérations</th>
         </tr>
     </thead>
     <tbody>
@@ -26,6 +27,7 @@
             <td>{{contrat.idContrat}}</td>
             <td>{{contrat.prixContrat}}</td>
             <td>{{contrat.dateTransactionContrat}}</td>
+            <td><a (click)="naviguer(contrat)" >Supprimer</a> | <a [routerLink]="['/contrat/update']" [queryParams]="{pIdContrat:contrat.idContrat}" >Modifier</a></td>
         </tr>
     </tbody>
 </table>

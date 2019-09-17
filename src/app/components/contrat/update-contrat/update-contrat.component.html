@@ -1,1 +1,41 @@
-<p>update-contrat works!</p>
+<!-- Material form register -->
+<div class="card" id="login">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Modifier un Contrat</strong>
+    </h5>
+  
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+  
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" action="#!" (submit)="modifierContrat()">
+  
+            <div class="form-group" >
+                <label for="idContrat">#ID contrat</label>
+                <input type="number" class="form-control" id="idContrat" placeholder="ID du contrat" [(ngModel)]="contrat.idContrat" name="pIdContrat"/>
+            </div>
+            <div class="form-group" >
+                <label for="idPrixContrat">Prix contrat</label>
+                <input type="number" class="form-control" id="idPrixContrat" placeholder="Prix du contrat" [(ngModel)]="contrat.prixContrat" name="pPrixContrat"/>
+            </div>
+            <div class="form-group" >
+                <label for="idDateTransactionContrat">Date Transaction</label>
+                <input type="text" class="form-control" id="idDateTransactionContrat" placeholder="Date de la Transaction" [(ngModel)]="contrat.dateTransactionContrat" name="pDateTransactionContrat"/>
+            </div>
+           
+           
+  
+  
+  
+            <!-- Sign up button -->
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Modifier le contrat</button>
+        </form>
+        <!-- Form -->
+  
+    </div>
+  
+  </div>
+  <!-- Material form register --> 
+  
+  

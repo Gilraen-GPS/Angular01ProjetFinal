@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 })
 export class AddContratComponent implements OnInit {
 
-  contrat:Contrat  =new Contrat();
+  contrat:Contrat  =new Contrat;
 
   constructor(private cService:ContratService, private router:Router) { }
 
@@ -23,8 +23,8 @@ export class AddContratComponent implements OnInit {
 
   
   ajouterContrat(){
-    this.cService.addContrat(this.contrat).subscribe((cOut) => { if (cOut.idContrat!=0) {
-                          this.router.navigate(["/contrat/getAll"])
+    this.cService.addContrat(this.contrat).subscribe((cOut) => { if (cOut!=null) {
+                          this.router.navigate(["/welcome"])
                   }}
                   );
                 }
