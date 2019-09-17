@@ -1,13 +1,13 @@
 <nav>
   <div class="row">
     <div style="margin-left: 25px; margin-right: 5px;">
-      <img src="assets\images\41YiysJnF7L._SX425_.jpg" />
+      <img src="../../assets/images/Logo.jpg" />
     </div>
     <div class="col-2">
       <a [routerLink]="['/welcome']">Home</a>
     </div>
-    <div style="margin-right: 30px;">
-      <span (click)="logOut()"><a [routerLink]="['/logout']"><img src="assets\images\disconnect-icon-png-10.png" /></a></span>
+    <div class="col-2" id="deconnect1">
+      <span (click)="logOut()"><a [routerLink]="['/logout']">Log Out<img id="deconnect" src="../../assets/images/disconnect-icon-png-10.png"/></a></span>
     </div>
   </div>
 </nav>
