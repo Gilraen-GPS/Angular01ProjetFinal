@@ -1,0 +1,57 @@
+<nav>
+    <div class="row">
+        <div style="margin-left: 25px; margin-right: 5px;">
+            <img src="assets\images\41YiysJnF7L._SX425_.jpg" />
+        </div>
+        <div class="col-2">
+            <a [routerLink]="['/welcome']">Home</a>
+        </div>
+        <div class="btn-group mr-3">
+            <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+                <button [routerLink]="['/accueil']" class="btn btn-outline-primary">Accueil</button>
+            </div>
+        </div>
+        <div class="btn-group mr-3">
+            <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+                <button class="btn btn-outline-primary" ngbDropdownToggle>Cargaisons</button>
+                <div class="dropdown-menu" ngbDropdownMenu>
+                    <a [routerLink]="['/cargaisonAerienne']" ngbDropdownItem>Cargaison Aeriennes</a>
+                    <a [routerLink]="['/cargaisonRoutiere']" ngbDropdownItem>Cargaisons Routieres</a>
+                </div>
+            </div>
+        </div>
+        <div class="btn-group mr-3" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+            <button class="btn btn-outline-primary" ngbDropdownToggle>Marchandises</button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+                <a [routerLink]="['/ajouterMarchandise']" ngbDropdownItem>Ajouter marchandise</a>
+                <a [routerLink]="['/modifierMarchandise']" ngbDropdownItem>Modifier marchandise</a>
+                <a [routerLink]="['/rechercherMarchandise']" ngbDropdownItem>Rechercher marchandise</a>
+                <a [routerLink]="['/listerMarchandise']" ngbDropdownItem>Liste des marchandises</a>
+                <a [routerLink]="['/supprimerMarchandise']" ngbDropdownItem>Supprimer marchandise</a>
+            </div>
+        </div>
+        <div class="col text-right">
+            <div ngbDropdown placement="bottom-right" class="d-inline-block">
+                <button class="btn btn-outline-primary" id="dropdownForm1" ngbDropdownToggle>Log in</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownForm1">
+                    <form class="px-4 py-3">
+                        <div class="form-group">
+                            <label for="exampleDropdownFormEmail1">Username</label>
+                            <input type="text" class="form-control" id="exampleDropdownFormEmail1"
+                                placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleDropdownFormPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleDropdownFormPassword1"
+                                placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Log in</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div style="margin-right: 30px;">
+            <a href="#"><img src="assets\images\disconnect-icon-png-10.png" /></a>
+        </div>
+    </div>
+</nav>
