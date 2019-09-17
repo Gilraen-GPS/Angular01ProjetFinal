@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-<div>
-    <div class="row">
-        <h3>Liste des contrats</h3>
-    </div>
-    <div class="row" id="table">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">#ID Contrat</th>
-                    <th scope="col">Prix Contrat</th>
-                    <th scope="col">Date de la Transaction</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let contrat of contrats | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
-                    <td>{{contrat.idContrat}}</td>
-                    <td>{{contrat.prixContrat}}</td>
-                    <td>{{contrat.dateTransactionContrat}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="row">
-        <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="contrats.length"></ngb-pagination>
-    </div>
-</div>
-=======
 <!-- <table>
     <tr>
         <th>#ID Contrat</th>
@@ -59,4 +31,3 @@
 </table>
 
 <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="contrats.length"></ngb-pagination>
->>>>>>> 3c0ee5a526b7ddc806efdc04efdb6852e13f2b8b

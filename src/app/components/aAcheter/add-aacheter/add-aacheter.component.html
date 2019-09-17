@@ -6,20 +6,20 @@
     <!--Card content-->
     <div class="card-body px-lg-5 pt-0">
         <!-- Form -->
-        <form class="text-center" style="color: #757575;">
+        <form class="text-center" style="color: #757575;" action="#!" (submit)="ajouter()">
             <div class="form-row">
                 <div class="col">
                     <!-- First name -->
                     <div class="md-form text-info waves-effect z-depth-0">
                         <label for="materialRegisterFormFirstName">Statut Bien Immobilier</label>
-                        <input type="text" id="materialRegisterFormFirstName" class="form-control" [(ngModel)]="aAcheter.statutBienImmobilier" name="statutBienImmobilier">
+                        <input type="text" id="materialRegisterFormFirstName" class="form-control" [(ngModel)]="aAcheter.statutBienImmobilier" name="pStatutBienImmobilier">
                     </div>
                 </div>
                 <div class="col">
                     <!-- Last name -->
                     <div class="md-form text-info">
                         <label for="materialRegisterFormLastName">Date de Soumission</label>
-                        <input type="text" id="materialRegisterFormLastName" class="form-control" [(ngModel)]="aAcheter.dateSoumissionBienImmobilier" name="dateSoumissionBienImmobilier">
+                        <input type="text" id="materialRegisterFormLastName" class="form-control" [(ngModel)]="aAcheter.dateSoumissionBienImmobilier" name="pDateSoumissionBienImmobilier">
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                     <div class="md-form text-info">
                         <label for="materialRegisterFormPassword">Localisation du bien</label>
                         <input type="text" id="materialRegisterFormPassword" class="form-control"
-                            aria-describedby="materialRegisterFormPasswordHelpBlock" [(ngModel)]="aAcheter.localisationBienImmobilier" name="localisationBienImmobilier">
+                            aria-describedby="materialRegisterFormPasswordHelpBlock" [(ngModel)]="aAcheter.localisationBienImmobilier" name="pLocalisationBienImmobilier">
                     </div>
                 </div>
                 <!-- Phone number -->
@@ -37,7 +37,7 @@
                     <div class="md-form text-info">
                         <label for="materialRegisterFormPhone">Photo</label>
                         <input type="text" id="materialRegisterFormPhone" class="form-control"
-                            aria-describedby="materialRegisterFormPhoneHelpBlock" [(ngModel)]="aAcheter.photo" name="photo">
+                            aria-describedby="materialRegisterFormPhoneHelpBlock" [(ngModel)]="aAcheter.photo" name="pPhoto">
                     </div>
                 </div>
             </div>
@@ -47,7 +47,7 @@
                         <div class="md-form text-info">
                             <label for="materialRegisterFormPassword">Prix du bien</label>
                             <input type="number" id="materialRegisterFormPassword" class="form-control"
-                                aria-describedby="materialRegisterFormPasswordHelpBlock" [(ngModel)]="aAcheter.prixDemandeAAcheter" name="prixDemandeAAcheter">
+                                aria-describedby="materialRegisterFormPasswordHelpBlock" [(ngModel)]="aAcheter.prixDemandeAAcheter" name="pPrixDemandeAAcheter">
                         </div>
                     </div>
                     <!-- Phone number -->
@@ -55,12 +55,12 @@
                         <div class="md-form text-info">
                             <label for="materialRegisterFormPhone">Etat du bien</label>
                             <input type="text" id="materialRegisterFormPhone" class="form-control"
-                                aria-describedby="materialRegisterFormPhoneHelpBlock" [(ngModel)]="aAcheter.etatAAcheter" name="etatAAcheter">
+                                aria-describedby="materialRegisterFormPhoneHelpBlock" [(ngModel)]="aAcheter.etatAAcheter" name="pEtatAAcheter">
                         </div>
                     </div>
                 </div>
             <!-- Sign up button -->
-            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" (click)="ajouter()">Ajouter le bien</button>
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Ajouter le bien</button>
         </form>
         <!-- Form -->
     </div>
