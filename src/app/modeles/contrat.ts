@@ -1,5 +1,7 @@
 export class Contrat {
-    private idContrat : number;
-    private prixContrat : number;
-    private dateTransactionContrat : string;
+    idContrat:number;
+    prixContrat:number;
+    dateTransactionContrat:string;
+
+
 }
