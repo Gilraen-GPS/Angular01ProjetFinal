@@ -1,6 +1,4 @@
 export class AAcheter {
-
-    
    public idBienImmobilier:number;
    public statutBienImmobilier:string;
    public dateSoumissionBienImmobilier:string;
