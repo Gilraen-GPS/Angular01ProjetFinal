@@ -45,7 +45,7 @@ import { LoginComponent } from './security/login';
 
 
 const routes: Routes = [
-  {path:"", component:LoginComponent},
+  {path:"", component:AccueilComponent},
   {path:"welcome", component:AccueilComponent},
 
   {path:"aAcheter/add", component:AddAAcheterComponent},
