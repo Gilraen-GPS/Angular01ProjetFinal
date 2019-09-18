@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ProprietaireService } from 'src/app/services/proprietaire.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-get-all-proprietaire',
   templateUrl: './get-all-proprietaire.component.html',

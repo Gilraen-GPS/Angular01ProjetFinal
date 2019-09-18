@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AAcheterService } from 'src/app/services/a-acheter.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-get-by-id-aacheter',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetByIdAAcheterComponent implements OnInit {
 
-  constructor() { }
+  idBienImmobilier : number;
+
+  constructor(private aAcheterService : AAcheterService, private router : Router) { }
 
   ngOnInit() {
+  }
+
+  getById(){
+    this.aAcheterService.getByIdAAcheter(this.idBienImmobilier).subscribe()
   }
 
 }

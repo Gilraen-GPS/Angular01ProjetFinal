@@ -12,7 +12,9 @@ export class AAcheterService {
   constructor(private httpClient : HttpClient) { }
 
   addAAcheter(aAcheter : AAcheter){
-    return this.httpClient.post<AAcheter>(this.url+"add", aAcheter);
+    console.log(aAcheter);
+
+    return this.httpClient.post<AAcheter>(this.url+"add", aAcheter, {observe : 'response'});
   }
 
   updateAAcheter(aAcheter : AAcheter){
