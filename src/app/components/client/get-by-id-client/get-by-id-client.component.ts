@@ -18,7 +18,7 @@ export class GetByIdClientComponent implements OnInit {
   ngOnInit() {
   }
 
-  rechercher(){
+  rechercherClient(){
 this.clientService.getByIdClient(this.idPersonne).subscribe((cOut) => { if (cOut){
 this.indice2=false;
   this.indice=true;

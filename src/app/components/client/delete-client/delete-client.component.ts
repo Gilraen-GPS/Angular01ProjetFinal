@@ -19,6 +19,7 @@ export class DeleteClientComponent implements OnInit {
   this.clientService.deleteClient(this.idPersonne).subscribe(reponse => { 
     if (reponse.status != 200){ 
     this.indice = true;
+    //sa
     this.router.navigate(['/client/delete'])
       
   }else{
