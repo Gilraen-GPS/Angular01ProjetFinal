@@ -1,1 +1,48 @@
-<p>get-all-aacheter works!</p>
+<div>
+    <div class="row">
+        <h3>Liste des biens à acheter</h3>
+    </div>
+    <div class="row" id="table">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#ID</th>
+                    <th scope="col">Statut du bien</th>
+                    <th scope="col">Date de soumission du bien</th>
+                    <th scope="col">Localisation du bien</th>
+                    <th scope="col">Date de disponibilité du bien</th>
+                    <th scope="col">Revenu Cadastral</th>
+                    <th scope="col">Pays</th>
+                    <th scope="col">Photo</th>
+                    <th scope="col">Numéro de facture</th>
+                    <th scope="col">Date de facture</th>
+                    <th scope="col">Numéro Affaire du bien</th>
+                    <th scope="col">Type de bien</th>
+                    <th scope="col">Prix demandé</th>
+                    <th scope="col">Etat du bien</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let aAcheter of aAcheters | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                    <td>{{aAcheter.idBienImmobilier}}</td>
+                    <td>{{aAcheter.statutBienImmobilier}}</td>
+                    <td>{{aAcheter.dateSoumissionBienImmobilier}}</td>
+                    <td>{{aAcheter.localisationBienImmobilier}}</td>
+                    <td>{{aAcheter.dateDispoBienImmobilier}}</td>
+                    <td>{{aAcheter.revenuCadastralBienImmobilier}}</td>
+                    <td>{{aAcheter.paysBienImmobilier}}</td>
+                    <td>{{aAcheter.photo}}</td>    
+                    <td>{{aAcheter.numeroFactureBienImmobilier}}</td>
+                    <td>{{aAcheter.dateFactureBienImmobilier}}</td>
+                    <td>{{aAcheter.numeroAffaireBienImmobilier}}</td>
+                    <td>{{aAcheter.typeDeBienImmobilier}}</td>
+                    <td>{{aAcheter.prixDemandeAAcheter}}</td>
+                    <td>{{aAcheter.etatAAcheter}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="aAcheters.length"></ngb-pagination>
+    </div>
+</div>

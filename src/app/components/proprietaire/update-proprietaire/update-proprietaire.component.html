@@ -1,1 +1,49 @@
-<p>update-proprietaire works!</p>
+<!-- Material form register -->
+<div class="card" id="login">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Modifier un Proprietaire</strong>
+    </h5>
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" (submit)="modifierProp()">
+
+            <div class="form-group">
+                <label for="idProp">#ID Proprietaire</label>
+                <input type="number" class="form-control" id="idProp" placeholder="ID du proprietaire"
+                    [(ngModel)]="proprietaire.idPersonne" name="pIdProprietaire" />
+            </div>
+            <div class="form-group">
+                <label for="idNomProp">Nom du proprietaire</label>
+                <input type="text" class="form-control" id="idNomProp" placeholder="Nom du proprietaire"
+                    [(ngModel)]="proprietaire.nomPersonne" name="pNomProp" />
+            </div>
+            <div class="form-group">
+                <label for="idTelProp">Telephone Prive</label>
+                <input type="text" class="form-control" id="idTelProp" placeholder="Telephone Prive"
+                    [(ngModel)]="proprietaire.telephonePrive" name="pTelProp" />
+            </div>
+            <div class="form-group">
+                <label for="idTelProProp">Telephone Professionnel</label>
+                <input type="text" class="form-control" id="idTelProProp" placeholder="Telephone Professionnel"
+                    [(ngModel)]="proprietaire.telephoneProfessionnel" name="pTelProProp" />
+            </div>
+            <div class="form-group">
+                <label for="idAddrProp">Adresse du Proprietaire</label>
+                <input type="text" class="form-control" id="idAddrProp" placeholder="Adresse du proprietaire"
+                    [(ngModel)]="proprietaire.adresseProprietaire" name="pAddrProp" />
+            </div>
+
+            <!-- Sign up button -->
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0"
+                type="submit">Modifier le proprietaire</button>
+        </form>
+        <!-- Form -->
+
+    </div>
+
+</div>
+<!-- Material form register -->

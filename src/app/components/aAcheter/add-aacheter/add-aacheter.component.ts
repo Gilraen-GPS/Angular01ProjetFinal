@@ -12,10 +12,8 @@ import { Router } from '@angular/router';
 })
 export class AddAAcheterComponent implements OnInit {
 
-  aAcheter : AAcheter = new AAcheter();
-  model: NgbDateStruct;
-  control = new FormControl(null, Validators.required);
-
+  aAcheter:AAcheter = new AAcheter();
+  
   constructor(private router : Router, private aAcheterService : AAcheterService) { }
 
   ngOnInit() {

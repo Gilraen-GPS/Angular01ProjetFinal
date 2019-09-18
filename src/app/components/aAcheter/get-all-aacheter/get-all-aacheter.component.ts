@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AAcheterService } from 'src/app/services/a-acheter.service';
 
 @Component({
   selector: 'app-get-all-aacheter',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetAllAAcheterComponent implements OnInit {
 
-  constructor() { }
+  aAcheters : any;
+  page = 1;
+  pageSize = 4;
+
+  constructor(private aAcheterService : AAcheterService) { }
 
   ngOnInit() {
+    this.aAcheterService.getAllAAcheter().subscribe(data=>{
+      this.aAcheters=data;
+    })
   }
 
 }

@@ -1,1 +1,10 @@
-<p>delete-proprietaire works!</p>
+<h1>FORMULAIRE DE SUPPRESSION PROPRIETAIRE</h1>
+<form (submit)="supprimerProp()">
+
+    <div class="form-group">
+        <label for="idIdProp">Id</label>
+        <input type="number" class="form-control" id="idIdProp" placeholder="IdProp" [(ngModel)]="idPersonne" name="pIdProp">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Supprimer</button>
+</form>

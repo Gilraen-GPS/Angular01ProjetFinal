@@ -18,8 +18,8 @@ export class DeleteContratComponent implements OnInit {
   supprimerContrat(){
   this.cService.deleteContrat(this.idContrat).subscribe(reponse => { if (reponse.status == 200)
     { this.router.navigate(['/welcome']);
-  }
-});
+   }
+  });
   
 
 }
