@@ -18,7 +18,7 @@ export class GetByIdContratComponent implements OnInit {
   ngOnInit() {
   }
 
-  rechercher(){
+  rechercherContrat(){
 this.cService.getByIdContrat(this.idContrat).subscribe((cOut) => { if (cOut){
 this.indice2=false;
   this.indice=true;
