@@ -1,1 +1,58 @@
-<p>get-by-id-proprietaire works!</p>
+<!-- Material form register -->
+<div class="card" id="login">
+
+        <h5 class="card-header info-color white-text text-center py-4">
+            <strong>Rechercher un Proprietaire</strong>
+        </h5>
+      
+        <!--Card content-->
+        <div class="card-body px-lg-5 pt-0">
+      
+            <!-- Form -->
+            <form class="text-center" style="color: #757575;" (submit)="rechercherProp()">
+      
+                <div class="form-group" >
+                    <label for="idProprietaire">#ID Proprietaire</label>
+                    <input type="number" class="form-control" id="idProprietaire" placeholder="ID du proprietaire" [(ngModel)]="idPersonne" name="pIdProprietaire"/>
+                </div>
+                     
+               
+      
+      
+      
+                <!-- Sign up button -->
+                <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Rechercher le proprietaire</button>
+            </form>
+            <!-- Form -->
+      
+        </div>
+      
+      </div>
+      <!-- Material form register --> 
+      <div  *ngIf="indice">
+      <h3>Proprietaire recherché</h3>
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">ID du Propriétaire</th>
+                <th scope="col">Nom du Propriétaire</th>
+                <th scope="col">Télephone Privé </th>
+                <th scope="col">Téléphone Professionnel</th>
+                <th scope="col">Adresse du Propriétaire</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{proprietaire.idPersonne}}</td>
+                <td>{{proprietaire.nomPersonne}}</td>
+                <td>{{proprietaire.telephonePrive}}</td>
+                <td>{{proprietaire.telephoneProfessionnel}}</td>
+                <td>{{proprietaire.adresseProprietaire}}</td>      
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    
+    <div  *ngIf="indice2"><p>Le proprietaire n'existe pas</p>
+    </div>

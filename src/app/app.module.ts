@@ -65,7 +65,7 @@ import { HomeComponent } from './security/home';
 import { LoginComponent } from './security/login';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DragDropModule } from '@angular/cdk/drag-drop';
+
 
 
 @NgModule({
@@ -132,7 +132,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     FormsModule,
     routing,
     BrowserAnimationsModule, 
-    DragDropModule
+    
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
