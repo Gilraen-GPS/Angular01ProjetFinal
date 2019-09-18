@@ -1,7 +1,7 @@
 <!-- Material form register -->
 <div class="card" id="login">
     <h5 class="card-header info-color white-text text-center py-4">
-        <strong>Supprimer un bien à vendre</strong>
+        <strong>Rechercher un bien à vendre</strong>
     </h5>
     <!--Card content-->
     <div class="card-body px-lg-5 pt-0">
@@ -20,10 +20,54 @@
             <!-- Sign up button -->
             <div class="col-8">
             <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit"
-                (click)="getById()">Supprimer le bien</button>
+                (click)="getById()">Rechercher le bien</button>
             </div>
         </form>
         <!-- Form -->
     </div>
 </div>
 <!-- Material form register -->
+
+<div  *ngIf="indice">
+    <div class="row">
+    <h3>Bien recherché</h3>
+</div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#ID</th>
+                <th scope="col">Statut du bien</th>
+                <th scope="col">Date de soumission du bien</th>
+                <th scope="col">Localisation du bien</th>
+                <th scope="col">Date de disponibilité du bien</th>
+                <th scope="col">Revenu Cadastral</th>
+                <th scope="col">Pays</th>
+                <th scope="col">Photo</th>
+                <th scope="col">Numéro de facture</th>
+                <th scope="col">Date de facture</th>
+                <th scope="col">Numéro Affaire du bien</th>
+                <th scope="col">Type de bien</th>
+                <th scope="col">Prix demandé</th>
+                <th scope="col">Etat du bien</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{aAcheter.idBienImmobilier}}</td>
+                <td>{{aAcheter.statutBienImmobilier}}</td>
+                <td>{{aAcheter.dateSoumissionBienImmobilier}}</td>
+                <td>{{aAcheter.localisationBienImmobilier}}</td>
+                <td>{{aAcheter.dateDispoBienImmobilier}}</td>
+                <td>{{aAcheter.revenuCadastralBienImmobilier}}</td>
+                <td>{{aAcheter.paysBienImmobilier}}</td>
+                <td>{{aAcheter.photo}}</td>    
+                <td>{{aAcheter.numeroFactureBienImmobilier}}</td>
+                <td>{{aAcheter.dateFactureBienImmobilier}}</td>
+                <td>{{aAcheter.numeroAffaireBienImmobilier}}</td>
+                <td>{{aAcheter.typeDeBienImmobilier}}</td>
+                <td>{{aAcheter.prixDemandeAAcheter}}</td>
+                <td>{{aAcheter.etatAAcheter}}</td>
+            </tr>
+        </tbody>
+    </table>
+  </div>

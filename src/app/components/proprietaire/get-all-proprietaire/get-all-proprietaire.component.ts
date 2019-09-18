@@ -1,14 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProprietaireService } from 'src/app/services/proprietaire.service';
 import { Router } from '@angular/router';
-<<<<<<< HEAD
 import { Proprietaire } from 'src/app/modeles/proprietaire';
-<<<<<<< HEAD
-
-=======
->>>>>>> e2fb89dd1b49845582d1c7d82caf780f39508801
-=======
->>>>>>> 0192579f3fa30254c6b8547bf77b741bb7aae5f9
 
 @Component({
   selector: 'app-get-all-proprietaire',
