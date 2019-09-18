@@ -20,9 +20,7 @@ export class UpdateProprietaireComponent implements OnInit {
     // récupérer l'ID du param de la requete
     this.ar.queryParams.subscribe((listeParams) => { this.idPersonne = listeParams['pIdProprietaire']; });
     //recuperer le proprietaire à partir de l'ID recupéré
-    this.propService.getByIdProprietaire
-      (this.idPersonne).subscribe(propOut => { this.proprietaire = propOut; })
-
+    this.propService.getByIdProprietaire(this.idPersonne).subscribe(propOut => { this.proprietaire = propOut; })
   }
 
   modifierProp() {

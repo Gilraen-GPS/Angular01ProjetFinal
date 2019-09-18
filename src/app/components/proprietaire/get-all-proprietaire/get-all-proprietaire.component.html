@@ -12,7 +12,7 @@
             <th scope="col">Télephone Privé </th>
             <th scope="col">Téléphone Professionnel</th>
             <th scope="col">Adresse du Propriétaire</th>
-            <!--<th scope="col">Modification</th>-->
+            <th scope="col">Modification</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,9 +22,9 @@
             <td>{{prop.telephonePrive}}</td>
             <td>{{prop.telephoneProfessionnel}}</td>
             <td>{{prop.adresseProprietaire}}</td>
-            <!--<td><a [routerLink]="['/updateProp']" [queryParams]="{pIdProp : prop.idPersonne}">Modifier</a><br/>
+            <td><button [routerLink]="['/update']" [queryParams]="{pIdProprietaire : prop.idPersonne}">Modifier</button><br/>
                 <button (click)="supprimerProp(prop)"> Supprimer </button>
-            </td>-->
+            </td>
                 </tr>
             </tbody>
         </table>    

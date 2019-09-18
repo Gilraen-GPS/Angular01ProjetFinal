@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProprietaireService } from 'src/app/services/proprietaire.service';
 import { Router } from '@angular/router';
-import { Proprietaire } from 'Angular01ProjetFinal/src/app/modeles/proprietaire';
+import { Proprietaire } from 'src/app/modeles/proprietaire';
+
 
 @Component({
   selector: 'app-get-all-proprietaire',
@@ -22,13 +23,13 @@ export class GetAllProprietaireComponent implements OnInit {
     
   }
 
-  /*supprimerProp(prop: Proprietaire) {
+  supprimerProp(prop: Proprietaire) {
     this.propService.deleteProprietaire(prop.idPersonne).subscribe(reponse => {
       //si,la marrg est ajouter aller vers accueil 
       if (reponse.status === 200) {
-        this.proprietaire = this.proprietaire.filter(propList => propList !== prop)
+        this.proprietaires = this.proprietaires.filter(propList => propList !== prop)
       }
     });
-  }*/
+  }
 
 }
