@@ -20,8 +20,8 @@ export class AddAAcheterComponent implements OnInit {
   }
 
   ajouter(){
-    this.aAcheterService.addAAcheter(this.aAcheter).subscribe(aAcheterOut=>{
-      if(aAcheterOut.idBienImmobilier!=0){
+    this.aAcheterService.addAAcheter(this.aAcheter).subscribe(response=>{
+      if(response.status===200){
         this.router.navigate(['/aAcheter/getAll']);
       }
     });
