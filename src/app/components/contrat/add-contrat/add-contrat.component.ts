@@ -23,13 +23,18 @@ export class AddContratComponent implements OnInit {
 
   
   ajouterContrat(){
-    this.cService.addContrat(this.contrat).subscribe((cOut) => { if (cOut!=null) {
-                          this.router.navigate(["/welcome"])
-                  }}
-                  );
-                }
+    this.cService.addContrat(this.contrat)
+    .subscribe( data => {
+      if (data.idContrat != null) {
+        this.router.navigate(["/welcome"]);
+      }
+    },
+
+    );
+}
+}
                 
 
   
 
-}
+

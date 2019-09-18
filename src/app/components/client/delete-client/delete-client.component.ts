@@ -9,14 +9,20 @@ import { Router } from '@angular/router';
 })
 export class DeleteClientComponent implements OnInit {
   idPersonne:number;
+  indice = false;
   constructor(private clientService:ClientService, private router:Router) { }
 
   ngOnInit() {
   }
 
   supprimerContrat(){
-  this.clientService.deleteClient(this.idPersonne).subscribe(reponse => { if (reponse.status == 200)
-    { this.router.navigate(['/welcome']);
+  this.clientService.deleteClient(this.idPersonne).subscribe(reponse => { 
+    if (reponse.status != 200){ 
+    this.indice = true;
+    this.router.navigate(['/client/delete'])
+      
+  }else{
+    this.router.navigate(['/welcome'])
   }
 });
   

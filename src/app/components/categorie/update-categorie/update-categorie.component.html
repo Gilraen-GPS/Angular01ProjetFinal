@@ -1,1 +1,52 @@
-<p>update-categorie works!</p>
+<!-- Material form register -->
+<div class="card" id="login">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Ajouter une Catégorie</strong>
+    </h5>
+  
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+  
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" action="#!" (submit)="ajouterCategorie()">
+  
+          
+            <div class="form-group" >
+                <label for="idCategorie">#ID Catégorie</label>
+                <input type="number" class="form-control" id="idCategorie" placeholder="Type de categorie" [(ngModel)]="categorie.typeCategorie" name="pTypeCategorie"/>
+            </div>
+            <div class="form-group" >
+                <label for="idTypeCategorie">Type Catégorie</label>
+                <input type="text" class="form-control" id="idTypeCategorie" placeholder="Type de categorie" [(ngModel)]="categorie.typeCategorie" name="pTypeCategorie"/>
+            </div>
+            <div class="form-group" >
+                <label for="idModeCategorie">Mode Catégorie</label>
+                <input type="text" class="form-control" id="idModeCategorie" placeholder="Mode Categorie" [(ngModel)]="categorie.modeCategorie" name="pModeCategorie"/>
+            </div>
+            <div class="form-group" >
+                <label for="idSuperficieCategorie">Prix contrat</label>
+                <input type="number" class="form-control" id="idSuperficieCategorie" placeholder="Superficie" [(ngModel)]="categorie.superficieCategorie" name="pSuperficieCategorie"/>
+            </div>
+            <div class="form-group" >
+                <label for="idNombreDeChambresCategorie">Prix contrat</label>
+                <input type="number" class="form-control" id="idNombreDeChambresCategorie" placeholder="Nombre de chambres" [(ngModel)]="categorie.nombreDeChambresCategorie" name="pNombreDeChambresCategorie"/>
+            </div>
+            <div class="form-group" >
+                <label for="idPhoto">Photo</label>
+                <input type="file" (change)="onFileSelected($event)" class="form-control" id="idPhoto" placeholder="Photo" [(ngModel)]="categorie.photo" name="pPhoto"/>
+            </div>
+           
+           
+  
+  
+  
+            <!-- Sign up button -->
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Ajouter la catégorie</button>
+        </form>
+        <!-- Form -->
+  
+    </div>
+  
+  </div>
+  <!-- Material form register --> 
