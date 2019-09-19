@@ -32,4 +32,8 @@ export class AAcheterService {
   getByIdAAcheter(idAAcheter : number){
     return this.httpClient.get<AAcheter>(this.url+"getById/"+idAAcheter);
   }
+
+  getByRegionAAcheter(region : string){
+    return this.httpClient.get<AAcheter>(this.url+"getRegionById/"+region);
+  }
 }
