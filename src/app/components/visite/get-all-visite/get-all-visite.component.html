@@ -1,1 +1,24 @@
-<p>get-all-visite works!</p>
+<div>
+    <div class="row">
+        <h3>Liste des visites</h3>
+    </div>
+    <div class="row" id="table">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#ID visite</th>
+                    <th scope="col">Date visite</th>
+                    <th scope="col">ID bien immobilier</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let visite of visites" >
+                    <td>{{visite.idVisite}}</td>
+                    <td>{{visite.dateVisite}}</td>
+                    <td>{{visite.idBienImmobilier}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   
+</div>

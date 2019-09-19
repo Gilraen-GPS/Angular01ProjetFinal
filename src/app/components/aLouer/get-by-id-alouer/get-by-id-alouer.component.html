@@ -1,1 +1,81 @@
-<p>get-by-id-alouer works!</p>
+<!-- Material form register -->
+<div class="card" id="login">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Rechercher une location</strong>
+    </h5>
+  
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+  
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" (submit)="rechercherALouer()">
+  
+            <div class="form-group" >
+                <label for="idVisite">#ID location</label>
+                <input type="number" class="form-control" id="idVisite" placeholder="ID de la location" [(ngModel)]="idBienImmobilier" name="pId"/>
+            </div>
+                 
+           
+  
+  
+  
+            <!-- Sign up button -->
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Rechercher la location</button>
+        </form>
+        <!-- Form -->
+  
+    </div>
+  
+  </div>
+  <!-- Material form register --> 
+  <div  *ngIf="indice">
+  <h3>Location recherchée</h3>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#ID</th>
+                    <th scope="col">Statut du bien</th>
+                    <th scope="col">Date de soumission du bien</th>
+                    <th scope="col">Localisation du bien</th>
+                    <th scope="col">Date de disponibilité du bien</th>
+                    <th scope="col">Revenu Cadastral</th>
+                    <th scope="col">Pays</th>
+                    <th scope="col">Photo</th>
+                    <th scope="col">Numéro de facture</th>
+                    <th scope="col">Date de facture</th>
+                    <th scope="col">Numéro Affaire du bien</th>
+                    <th scope="col">Type de bien</th>
+                    <th scope="col">Caution à louer</th>
+                    <th scope="col">Loyer à louer</th>
+                    <th scope="col">Charges à louer</th>
+                    <th scope="col">Bail à louer</th>
+                    <th scope="col">Garnitures à louer</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{aLouer.idBienImmobilier}}</td>
+            <td>{{aLouer.statutBienImmobilier}}</td>
+            <td>{{aLouer.dateSoumissionBienImmobilier}}</td>
+            <td>{{aLouer.localisationBienImmobilier}}</td>
+            <td>{{aLouer.dateDispoBienImmobilier}}</td>
+            <td>{{aLouer.revenuCadastralBienImmobilier}}</td>
+            <td>{{aLouer.paysBienImmobilier}}</td>
+            <td>{{aLouer.photo}}</td>    
+            <td>{{aLouer.numeroFactureBienImmobilier}}</td>
+            <td>{{aLouer.dateFactureBienImmobilier}}</td>
+            <td>{{aLouer.numeroAffaireBienImmobilier}}</td>
+            <td>{{aLouer.typeDeBienImmobilier}}</td>
+            <td>{{aLouer.cautionALouer}}</td>
+            <td>{{aLouer.loyerALouer}}</td>
+            <td>{{aLouer.chargesALouer}}</td>
+            <td>{{aLouer.bailALouer}}</td>
+            <td>{{aLouer.garnituresALouer}}</td>
+        </tr>
+    </tbody>
+  </table>
+
+  <div  *ngIf="indice2"><p>La location n'existe pas</p>
+  </div>
