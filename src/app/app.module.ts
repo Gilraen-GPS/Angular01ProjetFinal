@@ -64,6 +64,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './security/login/login.component';
 
+import { AccueilPrimaireComponent } from './accueil-primaire/accueil-primaire.component';
+
+import { BienImmoClientComponent } from './bien-immo-client/bien-immo-client.component';
+import { BienImmoPropComponent } from './bien-immo-prop/bien-immo-prop.component';
+
+import { GetByRegionComponent } from './components/aAcheter/get-by-region/get-by-region.component';
+
+
 
 
 @NgModule({
@@ -115,7 +123,14 @@ import { LoginComponent } from './security/login/login.component';
     AccueilComponent,
     CarouselComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+
+    AccueilPrimaireComponent,
+    BienImmoClientComponent,
+    BienImmoPropComponent,
+
+    GetByRegionComponent
+
   ],
   imports: [
     BrowserModule,
@@ -128,7 +143,11 @@ import { LoginComponent } from './security/login/login.component';
     HttpClientModule, 
     FormsModule,
     BrowserAnimationsModule,
+
     FullCalendarModule 
+
+    
+
     
   ],
   providers: [

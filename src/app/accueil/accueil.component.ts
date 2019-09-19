@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AAcheterService } from '../services/a-acheter.service';
+import { Router } from '@angular/router';
+import { AAcheter } from '../modeles/aacheter';
 
 @Component({
   selector: 'app-accueil',
@@ -6,10 +9,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./accueil.component.css']
 })
 export class AccueilComponent implements OnInit {
+  
+indice: boolean=false;
+indice2 : boolean = false;
+aAcheters : any;
 
-  constructor() { }
+  constructor(private achatService : AAcheterService, private router: Router) { }
 
   ngOnInit() {
+    this.indice2 = false;
+  }
+
+  rechercher(){
+    this.achatService.getByRegionAAcheter("Bretagne").subscribe(reponse => {
+      if(reponse !=null){
+        this.router.navigate(["/welcome"]);
+        this.indice = true;
+        this.indice2=false;
+        this.aAcheters = reponse;
+      }else{
+        this.indice=false;
+        this.indice2=true;
+      }
+    })
   }
 
 }
