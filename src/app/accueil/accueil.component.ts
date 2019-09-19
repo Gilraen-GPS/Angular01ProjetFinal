@@ -9,8 +9,7 @@ import { AAcheter } from '../modeles/aacheter';
   styleUrls: ['./accueil.component.css']
 })
 export class AccueilComponent implements OnInit {
-aAcheter : AAcheter = new AAcheter();
-region : string = this.aAcheter.region;
+  
 indice: boolean=false;
 indice2 : boolean = false;
 aAcheters : any;
@@ -22,7 +21,7 @@ aAcheters : any;
   }
 
   rechercher(){
-    this.achatService.getByRegionAAcheter(this.region).subscribe(reponse => {
+    this.achatService.getByRegionAAcheter("Bretagne").subscribe(reponse => {
       if(reponse !=null){
         this.router.navigate(["/welcome"]);
         this.indice = true;
