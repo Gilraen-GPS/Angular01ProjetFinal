@@ -14,4 +14,5 @@ export class AAcheter {
    public prixDemandeAAcheter:number;
    public etatAAcheter:string;
    public region;
+   public type;
 }
