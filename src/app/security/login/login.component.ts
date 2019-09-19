@@ -1,68 +1,40 @@
-﻿import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthentificationService } from '../services/authentification.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { first } from 'rxjs/operators';
-
-import { AuthenticationService } from '../_services';
+import { Agent } from 'src/app/modeles/agent';
 import { AppComponent } from 'src/app/app.component';
 
 @Component({
-    templateUrl: 'login.component.html',
-    styleUrls: ['./login.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-    loginForm: FormGroup;
-    loading = false;
-    submitted = false;
-    returnUrl: string;
-    error = '';
 
-    constructor(
-        private formBuilder: FormBuilder,
-        private route: ActivatedRoute,
-        private router: Router,
-        private authenticationService: AuthenticationService,
-        private appComponent: AppComponent
-    ) { }
+  returnUrl : string;
+  agent : Agent = new Agent();
+  indice : boolean = false;
 
-    ngOnInit() {
-        this.loginForm = this.formBuilder.group({
-            username: ['', Validators.required],
-            password: ['', Validators.required]
-        });
+  constructor(private authService : AuthentificationService, private router : Router, private route : ActivatedRoute, private appComponent : AppComponent) { }
 
-        // reset login status
-        this.authenticationService.logout();
+  ngOnInit() {
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+  }
 
-        // get return url from route parameters or default to '/'
-        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
-    }
+  seConnecter () {
+    this.authService.login(this.agent).subscribe((agentOut)=>{
+      if(agentOut){
+        localStorage.setItem('currentAgent',JSON.stringify(agentOut));
+        this.router.navigate([this.returnUrl]);
+      } else {
+        this.indice=true;
+      }
+    });
+  }
 
-    // convenience getter for easy access to form fields
-    get f() { return this.loginForm.controls; }
+  indiceTrue(){
+    this.appComponent.indiceTrue();
+  }
 
-    onSubmit() {
-        this.submitted = true;
 
-        // stop here if form is invalid
-        if (this.loginForm.invalid) {
-            return;
-        }
-
-        this.loading = true;
-        this.authenticationService.login(this.f.username.value, this.f.password.value)
-            .pipe(first())
-            .subscribe(
-                data => {
-                    this.router.navigate([this.returnUrl]);
-                },
-                error => {
-                    this.error = error;
-                    this.loading = false;
-                });
-    }
-
-    indiceTrue() {
-        this.appComponent.indiceTrue();
-    }
 }
