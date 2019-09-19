@@ -1,10 +1,12 @@
+
 import { Component, OnInit } from '@angular/core';
 import { ProprietaireService } from 'src/app/services/proprietaire.service';
-import { Router } from '@angular/router';
-import { Proprietaire } from 'src/app/modeles/proprietaire';
 
+import { Router } from '@angular/router';
+
+import { Proprietaire } from 'src/app/modeles/proprietaire';
 @Component({
-  selector: 'app-get-all-proprietaire',
+  selector: 'app-get-all-proprietaire', 
   templateUrl: './get-all-proprietaire.component.html',
   styleUrls: ['./get-all-proprietaire.component.css']
 })
