@@ -2,7 +2,7 @@
 <div class="card" id="login">
 
         <h5 class="card-header info-color white-text text-center py-4">
-            <strong>Rechercher un Proprietaire</strong>
+            <strong>Veuillez renseigner l'ID du propriétaire à recherché</strong>
         </h5>
       
         <!--Card content-->
@@ -12,8 +12,8 @@
             <form class="text-center" style="color: #757575;" (submit)="rechercherProp()">
       
                 <div class="form-group" >
-                    <label for="idProprietaire">#ID Proprietaire</label>
-                    <input type="number" class="form-control" id="idProprietaire" placeholder="ID du proprietaire" [(ngModel)]="idPersonne" name="pIdProprietaire"/>
+                    <label for="idProprietaire">ID du propriétaire</label>
+                    <input type="number" class="form-control" id="idProprietaire" placeholder="ID du propriétaire" [(ngModel)]="idPersonne" name="pIdProprietaire"/>
                 </div>
                      
                
@@ -21,7 +21,7 @@
       
       
                 <!-- Sign up button -->
-                <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Rechercher le proprietaire</button>
+                <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Rechercher le propriétaire</button>
             </form>
             <!-- Form -->
       
@@ -30,16 +30,16 @@
       </div>
       <!-- Material form register --> 
       <div  *ngIf="indice">
-      <h3>Proprietaire recherché</h3>
+      <h3>Informations du propriétaire recherché</h3>
     
     <table class="table table-striped">
         <thead>
             <tr>
-                <th scope="col">ID du Propriétaire</th>
-                <th scope="col">Nom du Propriétaire</th>
-                <th scope="col">Télephone Privé </th>
-                <th scope="col">Téléphone Professionnel</th>
-                <th scope="col">Adresse du Propriétaire</th>
+                <th scope="col">ID du propriétaire</th>
+                <th scope="col">Nom du propriétaire</th>
+                <th scope="col">Télephone privé </th>
+                <th scope="col">Téléphone professionnel</th>
+                <th scope="col">Adresse du propriétaire</th>
             </tr>
         </thead>
         <tbody>
@@ -54,5 +54,5 @@
     </table>
     </div>
     
-    <div  *ngIf="indice2"><p>Le proprietaire n'existe pas</p>
+    <div  *ngIf="indice2"><p>Le propriétaire n'existe pas</p>
     </div>
