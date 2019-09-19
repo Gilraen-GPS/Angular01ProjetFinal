@@ -9,7 +9,7 @@
     <div class="card-body px-lg-5 pt-0">
 
         <!-- Form -->
-        <form class="text-center" style="color: #757575;" action="#!" (submit)="ajouterClient()">
+        <form class="text-center" style="color: #757575;"  (submit)="ajouterClient()">
 
             
             <div class="form-group" >
@@ -43,3 +43,6 @@
 
 </div>
 <!-- Material form register --> 
+
+<div  *ngIf="indice"><p>Le client n'a pas été ajouté</p>
+</div>

@@ -1,1 +1,29 @@
-<p>get-all-categorie works!</p>
+<h3>Liste des catégories</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#ID Categorie</th>
+            <th scope="col">Type de Catégorie</th>
+            <th scope="col">Mode Catégorie</th>
+            <th scope="col">Superficie Catégorie</th>
+            <th scope="col">Nombre de Chambres Catégorie</th>
+            <th scope="col">Photo</th>
+            <th scope="col">Opérations</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let categorie of categories">
+            <td>{{categorie.idCategorie}}</td>
+            <td>{{categorie.typeCategorie}}</td>
+            <td>{{categorie.modeCategorie}}</td>
+            <td>{{categorie.superficieCategorie}}</td>
+            <td>{{categorie.nombreDeChambresCategorie}}</td>
+            <td>{{categorie.photo}}</td>
+            <td><a (click)="naviguer(categorie)" >Supprimer</a> | <a [routerLink]="['/categorie/update']" [queryParams]="{pIdCategorie:categorie.idCategorie}" >Modifier</a></td>
+        </tr>
+    </tbody>
+</table>
+
+<ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="contrats.length"></ngb-pagination>
+

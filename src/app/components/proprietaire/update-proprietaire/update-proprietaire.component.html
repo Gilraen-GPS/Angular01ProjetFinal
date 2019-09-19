@@ -2,7 +2,7 @@
 <div class="card" id="login">
 
     <h5 class="card-header info-color white-text text-center py-4">
-        <strong>Modifier un Proprietaire</strong>
+        <strong>Veuillez modifier le propriétaire selectionné</strong>
     </h5>
 
     <!--Card content-->
@@ -12,34 +12,34 @@
         <form class="text-center" style="color: #757575;" (submit)="modifierProp()">
 
             <div class="form-group">
-                <label for="idProp">#ID Proprietaire</label>
-                <input type="number" class="form-control" id="idProp" placeholder="ID du proprietaire"
+                <label for="idProp">ID du propriétaire</label>
+                <input type="number" class="form-control" id="idProp" placeholder="ID du propriétaire"
                     [(ngModel)]="proprietaire.idPersonne" name="pIdProprietaire" />
             </div>
             <div class="form-group">
-                <label for="idNomProp">Nom du proprietaire</label>
-                <input type="text" class="form-control" id="idNomProp" placeholder="Nom du proprietaire"
-                    [(ngModel)]="proprietaire.nomPersonne" name="pNomProp" />
+                <label for="idNomProp">Nom du propriétaire</label>
+                <input type="text" class="form-control" id="idNomProp" placeholder="Nom du propriétaire"
+                    [(ngModel)]="proprietaire.nomPersonne" name="pNomPersonne" />
             </div>
             <div class="form-group">
-                <label for="idTelProp">Telephone Prive</label>
-                <input type="text" class="form-control" id="idTelProp" placeholder="Telephone Prive"
-                    [(ngModel)]="proprietaire.telephonePrive" name="pTelProp" />
+                <label for="idTelProp">Téléphone privé</label>
+                <input type="text" class="form-control" id="idTelProp" placeholder="Téléphone privé"
+                    [(ngModel)]="proprietaire.telephonePrive" name="pTelephonePrive" />
             </div>
             <div class="form-group">
-                <label for="idTelProProp">Telephone Professionnel</label>
-                <input type="text" class="form-control" id="idTelProProp" placeholder="Telephone Professionnel"
-                    [(ngModel)]="proprietaire.telephoneProfessionnel" name="pTelProProp" />
+                <label for="idTelProProp">Téléphone professionnel</label>
+                <input type="text" class="form-control" id="idTelProProp" placeholder="Téléphone professionnel"
+                    [(ngModel)]="proprietaire.telephoneProfessionnel" name="pTelephoneProfessionnel" />
             </div>
             <div class="form-group">
-                <label for="idAddrProp">Adresse du Proprietaire</label>
-                <input type="text" class="form-control" id="idAddrProp" placeholder="Adresse du proprietaire"
-                    [(ngModel)]="proprietaire.adresseProprietaire" name="pAddrProp" />
+                <label for="idAddrProp">Adresse du propriétaire</label>
+                <input type="text" class="form-control" id="idAddrProp" placeholder="Adresse du propriétaire"
+                    [(ngModel)]="proprietaire.adresseProprietaire" name="pAdresseProprietaire" />
             </div>
 
             <!-- Sign up button -->
             <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0"
-                type="submit">Modifier le proprietaire</button>
+                type="submit">Modifier le propriétaire</button>
         </form>
         <!-- Form -->
 

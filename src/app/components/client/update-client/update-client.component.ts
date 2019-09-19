@@ -22,9 +22,12 @@ this.clientService.getByIdClient(this.id).subscribe(cOut => {this.client=cOut;})
 
 }
 
-  modifierContrat(){
+  modifierClient(){
     this.clientService.updateClient(this.client).subscribe(reponse => { if (reponse.status == 200)
-    { this.router.navigate(['/welcome']);
+    { 
+      
+      console.log("reponse:", reponse);
+      this.router.navigate(['/welcome']);
   }
 });
   

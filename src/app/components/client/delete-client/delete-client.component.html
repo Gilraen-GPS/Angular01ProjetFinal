@@ -9,7 +9,7 @@
     <div class="card-body px-lg-5 pt-0">
   
         <!-- Form -->
-        <form class="text-center" style="color: #757575;" action="#!" (submit)="supprimerClient()">
+        <form class="text-center" style="color: #757575;"  (submit)="supprimerClient()">
   
             <div class="form-group" >
                 <label for="idPersonne">#ID client</label>
@@ -29,3 +29,6 @@
   
   </div>
   <!-- Material form register --> 
+
+  <div  *ngIf="indice"><p>Le client n'a pas été supprimé</p>
+  </div>
