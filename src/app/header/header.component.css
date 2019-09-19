@@ -31,3 +31,13 @@ img {
     right: 0px; 
     position: absolute;
 }
+
+#login {
+    margin-right: 0px;
+    right: 100px; 
+    position: absolute;
+}
+
+a{
+    color: black;
+}
