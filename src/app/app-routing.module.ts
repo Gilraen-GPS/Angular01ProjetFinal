@@ -41,63 +41,64 @@ import { UpdateVisiteComponent } from './components/visite/update-visite/update-
 import { DeleteVisiteComponent } from './components/visite/delete-visite/delete-visite.component';
 import { GetByIdVisiteComponent } from './components/visite/get-by-id-visite/get-by-id-visite.component';
 import { GetAllVisiteComponent } from './components/visite/get-all-visite/get-all-visite.component';
-import { LoginComponent } from './security/login';
+import { LoginComponent } from './security/login/login.component';
+import { AuthGuard } from './security/services/auth.guard';
 
 
 const routes: Routes = [
   {path:"", component:AccueilComponent},
   {path:"welcome", component:AccueilComponent},
-  {path:"logout", component:LoginComponent},
+  {path:"login", component:LoginComponent},
 
-  {path:"aAcheter/add", component:AddAAcheterComponent},
-  {path:"aAcheter/update", component:UpdateAAcheterComponent},
-  {path:"aAcheter/delete", component:DeleteAAcheterComponent},
-  {path:"aAcheter/getById", component:GetByIdAAcheterComponent},
-  {path:"aAcheter/getAll", component:GetAllAAcheterComponent},
+  {path:"aAcheter/add", component:AddAAcheterComponent, canActivate:[AuthGuard]},
+  {path:"aAcheter/update", component:UpdateAAcheterComponent, canActivate:[AuthGuard]},
+  {path:"aAcheter/delete", component:DeleteAAcheterComponent, canActivate:[AuthGuard]},
+  {path:"aAcheter/getById", component:GetByIdAAcheterComponent, canActivate:[AuthGuard]},
+  {path:"aAcheter/getAll", component:GetAllAAcheterComponent, canActivate:[AuthGuard]},
 
-  {path:"aLouer/add", component:AddALouerComponent},
-  {path:"aLouer/update", component:UpdateALouerComponent},
-  {path:"aLouer/delete", component:DeleteALouerComponent},
-  {path:"aLouer/getById", component:GetByIdALouerComponent},
-  {path:"aLouer/getAll", component:GetAllALouerComponent},
+  {path:"aLouer/add", component:AddALouerComponent, canActivate:[AuthGuard]},
+  {path:"aLouer/update", component:UpdateALouerComponent, canActivate:[AuthGuard]},
+  {path:"aLouer/delete", component:DeleteALouerComponent, canActivate:[AuthGuard]},
+  {path:"aLouer/getById", component:GetByIdALouerComponent, canActivate:[AuthGuard]},
+  {path:"aLouer/getAll", component:GetAllALouerComponent, canActivate:[AuthGuard]},
 
-  {path:"agent/add", component:AddAgentComponent},
-  {path:"agent/update", component:UpdateAgentComponent},
-  {path:"agent/delete", component:DeleteAgentComponent},
-  {path:"agent/getById", component:GetByIdAgentComponent},
-  {path:"agent/getAll", component:GetAllAgentComponent},
+  {path:"agent/add", component:AddAgentComponent, canActivate:[AuthGuard]},
+  {path:"agent/update", component:UpdateAgentComponent, canActivate:[AuthGuard]},
+  {path:"agent/delete", component:DeleteAgentComponent, canActivate:[AuthGuard]},
+  {path:"agent/getById", component:GetByIdAgentComponent, canActivate:[AuthGuard]},
+  {path:"agent/getAll", component:GetAllAgentComponent, canActivate:[AuthGuard]},
 
-  {path:"categorie/add", component:AddCategorieComponent},
-  {path:"categorie/update", component:UpdateCategorieComponent},
-  {path:"categorie/delete", component:DeleteCategorieComponent},
-  {path:"categorie/getById", component:GetByIdCategorieComponent},
-  {path:"categorie/getAll", component:GetAllCategorieComponent},
+  {path:"categorie/add", component:AddCategorieComponent, canActivate:[AuthGuard]},
+  {path:"categorie/update", component:UpdateCategorieComponent, canActivate:[AuthGuard]},
+  {path:"categorie/delete", component:DeleteCategorieComponent, canActivate:[AuthGuard]},
+  {path:"categorie/getById", component:GetByIdCategorieComponent, canActivate:[AuthGuard]},
+  {path:"categorie/getAll", component:GetAllCategorieComponent, canActivate:[AuthGuard]},
 
-  {path:"client/add", component:AddClientComponent},
-  {path:"client/update", component:UpdateClientComponent},
-  {path:"client/delete", component:DeleteClientComponent},
-  {path:"client/getById", component:GetByIdClientComponent},
-  {path:"client/getAll", component:GetAllClientComponent},
+  {path:"client/add", component:AddClientComponent, canActivate:[AuthGuard]},
+  {path:"client/update", component:UpdateClientComponent, canActivate:[AuthGuard]},
+  {path:"client/delete", component:DeleteClientComponent, canActivate:[AuthGuard]},
+  {path:"client/getById", component:GetByIdClientComponent, canActivate:[AuthGuard]},
+  {path:"client/getAll", component:GetAllClientComponent, canActivate:[AuthGuard]},
 
-  {path:"contrat/add", component:AddContratComponent},
-  {path:"contrat/update", component:UpdateContratComponent},
-  {path:"contrat/delete", component:DeleteContratComponent},
-  {path:"contrat/getById", component:GetByIdContratComponent},
-  {path:"contrat/getAll", component:GetAllContratComponent},
+  {path:"contrat/add", component:AddContratComponent, canActivate:[AuthGuard]},
+  {path:"contrat/update", component:UpdateContratComponent, canActivate:[AuthGuard]},
+  {path:"contrat/delete", component:DeleteContratComponent, canActivate:[AuthGuard]},
+  {path:"contrat/getById", component:GetByIdContratComponent, canActivate:[AuthGuard]},
+  {path:"contrat/getAll", component:GetAllContratComponent, canActivate:[AuthGuard]},
 
-  {path:"proprietaire/add", component:AddProprietaireComponent},
-  {path:"proprietaire/update", component:UpdateProprietaireComponent},
-  {path:"proprietaire/delete", component:DeleteProprietaireComponent},
-  {path:"proprietaire/getById", component:GetByIdProprietaireComponent},
-  {path:"proprietaire/getAll", component:GetAllProprietaireComponent},
+  {path:"proprietaire/add", component:AddProprietaireComponent, canActivate:[AuthGuard]},
+  {path:"proprietaire/update", component:UpdateProprietaireComponent, canActivate:[AuthGuard]},
+  {path:"proprietaire/delete", component:DeleteProprietaireComponent, canActivate:[AuthGuard]},
+  {path:"proprietaire/getById", component:GetByIdProprietaireComponent, canActivate:[AuthGuard]},
+  {path:"proprietaire/getAll", component:GetAllProprietaireComponent, canActivate:[AuthGuard]},
 
-  {path:"visite/add", component:AddVisiteComponent},
-  {path:"visite/update", component:UpdateVisiteComponent},
-  {path:"visite/delete", component:DeleteVisiteComponent},
-  {path:"visite/getById", component:GetByIdVisiteComponent},
-  {path:"visite/getAll", component:GetAllVisiteComponent},
+  {path:"visite/add", component:AddVisiteComponent, canActivate:[AuthGuard]},
+  {path:"visite/update", component:UpdateVisiteComponent, canActivate:[AuthGuard]},
+  {path:"visite/delete", component:DeleteVisiteComponent, canActivate:[AuthGuard]},
+  {path:"visite/getById", component:GetByIdVisiteComponent, canActivate:[AuthGuard]},
+  {path:"visite/getAll", component:GetAllVisiteComponent, canActivate:[AuthGuard]},
 
-  {path:"**", component:AccueilComponent}
+  {path:"**", component:AccueilComponent, canActivate:[AuthGuard]}
 ];
 
 @NgModule({

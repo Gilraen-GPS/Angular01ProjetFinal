@@ -1,34 +1,39 @@
-﻿<div class="alert alert-info">
-    Username: test<br />
-    Password: test
-</div>
-<div class="col text-center">
-    <div id="login">
-        <h2>Login</h2>
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" formControlName="username" class="form-control"
-                    [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
-                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-                    <div *ngIf="f.username.errors.required">Username is required</div>
+<!-- Material form register -->
+<div class="card" id="login">
+
+        <h5 class="card-header info-color white-text text-center py-4">
+            <strong>Sign in</strong>
+        </h5>
+    
+        <!--Card content-->
+        <div class="card-body px-lg-5 pt-0">
+            <!-- Form -->
+            <form class="text-center" style="color: #757575;" action="#!">
+                <div class="form-row">
+                    <div class="col">
+                        <div class="md-form text-info">
+                            <label for="materialRegisterFormPassword">Identifiant</label>
+                            <input type="number" id="materialRegisterFormPassword" class="form-control"
+                                aria-describedby="materialRegisterFormPasswordHelpBlock" [(ngModel)]="agent.idAgent" name="pId">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form text-info">
+                            <label for="materialRegisterFormPhone">Mot de passe</label>
+                            <input type="password" id="materialRegisterFormPhone" class="form-control"
+                                aria-describedby="materialRegisterFormPhoneHelpBlock" [(ngModel)]="agent.mdpAgent" name="pMdpAgent">
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" formControlName="password" class="form-control"
-                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                    <div *ngIf="f.password.errors.required">Password is required</div>
-                </div>
-            </div>
-            <div class="form-group">
-                <button [disabled]="loading" class="btn btn-primary" [routerLink]="['/welcome']"
-                    routerLinkActive="router-link-active" (click)="indiceTrue()">Login</button>
-                <img *ngIf="loading" class="pl-2"
-                    src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
-            </div>
-            <div *ngIf="error" class="alert alert-danger">{{error}}</div>
-        </form>
+                <!-- Sign up button -->
+                <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" (click)="seConnecter()+indiceTrue()">Sign
+                    in</button>
+            </form>
+            <!-- Form -->
+    
+        </div>
+    
     </div>
-</div>
+
+    <h1 *ngIf="indice">Login ou mot de passe incorrect</h1>
+    <!-- Material form register -->
