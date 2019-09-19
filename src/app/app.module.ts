@@ -55,6 +55,8 @@ import { FooterComponent } from './footer/footer.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
+import { FullCalendarModule } from '@fullcalendar/angular';
+
 
 
 
@@ -125,7 +127,8 @@ import { LoginComponent } from './security/login/login.component';
     ReactiveFormsModule,
     HttpClientModule, 
     FormsModule,
-    BrowserAnimationsModule, 
+    BrowserAnimationsModule,
+    FullCalendarModule 
     
   ],
   providers: [

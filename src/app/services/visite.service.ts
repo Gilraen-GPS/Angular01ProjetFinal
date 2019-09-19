@@ -15,7 +15,7 @@ export class VisiteService {
 
   addVisite(visite : Visite,idImmobil:number,type:string){
       this.header.set('Access-Control-Allow-Origin','*')
-      return this.httpClient.post<Visite>(this.url+"add?type="+type+"&idImmobil="+idImmobil, visite, {headers:this.header});
+      return this.httpClient.post<Visite>(this.url+"add?type="+type+"&idImmobil="+idImmobil, visite, {headers:this.header,observe:'response'});
   }
 
   updateVisite(visite : Visite){

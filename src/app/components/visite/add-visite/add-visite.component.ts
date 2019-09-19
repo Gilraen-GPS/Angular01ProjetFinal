@@ -18,8 +18,8 @@ export class AddVisiteComponent implements OnInit {
   }
 
   ajouterVisite(){
-    this.visiteService.addVisite(this.visite,this.idImmobil,this.type).subscribe((vOut) => { if (vOut!=null) {
-      this.router.navigate(["/welcome"])
+    this.visiteService.addVisite(this.visite,this.idImmobil,this.type).subscribe((resp) => { if (resp.status===200) {
+      this.router.navigate(["/visite/getAll"])
 }}
 );
 }
