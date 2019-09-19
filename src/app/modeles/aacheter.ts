@@ -13,4 +13,5 @@ export class AAcheter {
    public typeDeBienImmobilier:string;
    public prixDemandeAAcheter:number;
    public etatAAcheter:string;
+   public region;
 }

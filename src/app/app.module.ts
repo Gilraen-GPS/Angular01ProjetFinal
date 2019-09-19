@@ -61,6 +61,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './security/login/login.component';
+import { GetByRegionComponent } from './components/aAcheter/get-by-region/get-by-region.component';
 
 
 
@@ -113,7 +114,8 @@ import { LoginComponent } from './security/login/login.component';
     AccueilComponent,
     CarouselComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+    GetByRegionComponent
   ],
   imports: [
     BrowserModule,
