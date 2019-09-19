@@ -1,13 +1,8 @@
 
 import { Component, OnInit } from '@angular/core';
 import { ProprietaireService } from 'src/app/services/proprietaire.service';
-<<<<<<< HEAD
 
 import { Router } from '@angular/router';
-=======
-import { Router } from '@angular/router';
-import { Proprietaire } from 'src/app/modeles/proprietaire';
->>>>>>> 6f27b0e4f6a9a1ac1ca1a21b08ab73f485f284c2
 
 import { Proprietaire } from 'src/app/modeles/proprietaire';
 @Component({
