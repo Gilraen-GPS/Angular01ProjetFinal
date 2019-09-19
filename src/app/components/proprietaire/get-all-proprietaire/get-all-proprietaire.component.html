@@ -22,7 +22,7 @@
             <td>{{prop.telephonePrive}}</td>
             <td>{{prop.telephoneProfessionnel}}</td>
             <td>{{prop.adresseProprietaire}}</td>
-            <td><button [routerLink]="['/update']" [queryParams]="{pIdProprietaire : prop.idPersonne}">Modifier</button><br/>
+            <td><button [routerLink]="['/proprietaire/update']" [queryParams]="{pIdProprietaire : prop.idPersonne}">Modifier</button><br/>
                 <button (click)="supprimerProp(prop)"> Supprimer </button>
             </td>
                 </tr>

@@ -16,7 +16,7 @@ export class ProprietaireService {
   }
 
   updateProprietaire(proprietaire : Proprietaire){
-    return this.httpClient.put<Proprietaire>(this.url+"update", proprietaire, {observe : 'response'});
+    return this.httpClient.put<Proprietaire>(this.url+"update/", proprietaire, {observe : 'response'});
   }
 
   deleteProprietaire(idProprietaire : number){
