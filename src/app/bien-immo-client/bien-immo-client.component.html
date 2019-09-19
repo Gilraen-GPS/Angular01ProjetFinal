@@ -1,12 +1,46 @@
-<div>
+
+
+<div class="test">
+        <button type="button" id="but2" class="btn btn-outline-secondary mr-2" placement="right"
+        [routerLink]="['/welcome-primaire']" >
+       ACCUEIL
+   </button>
+        <button type="button" id="but1" class="btn btn-outline-secondary mr-2" placement="bottom"
+        ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." popoverTitle="Achat">
+        Achat
+    </button>
+
+    <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom"
+        ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." popoverTitle="Vente">
+        Vente
+    </button>
+
+    <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom"
+        ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." popoverTitle="Location">
+        Location
+    </button>
+
+    <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom"
+        ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." popoverTitle="Rénovation">
+        Rénovation
+    </button>
+    <br/> 
+    <br/>
+    <div>
+           
         <div class="row">
-            <h3>Liste des biens à acheter</h3>
+            
+            
+            <h3>Logements à vendre et à louer disponible actuellement</h3>
+            <p>Les diffients logements sont à vendre ou à louer si vous etes interressé par un logement<br />
+                cliquer sur infos pour voir le detail du logement et les conditions d'achats.
+            </p>
         </div>
         <div class="row" id="table">
             <table class="table table-striped">
                 <thead>
                     <tr>
-                    
+
                         <th scope="col">Statut du bien</th>
                         <th scope="col">Date de soumission du bien</th>
                         <th scope="col">Localisation du bien</th>
@@ -15,24 +49,26 @@
                         <th scope="col">Photo</th>
                         <th scope="col">Type de bien</th>
                         <th scope="col">Prix demandé</th>
-                        
+
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let aAcheter of aAcheters | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
-                        
+                    <tr
+                        *ngFor="let aAcheter of aAcheters | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+
                         <td>{{aAcheter.statutBienImmobilier}}</td>
                         <td>{{aAcheter.dateSoumissionBienImmobilier}}</td>
                         <td>{{aAcheter.localisationBienImmobilier}}</td>
                         <td>{{aAcheter.dateDispoBienImmobilier}}</td>
                         <td>{{aAcheter.paysBienImmobilier}}</td>
-                        <td>{{aAcheter.photo}}</td>    
+                        <td>{{aAcheter.photo}}</td>
                         <td>{{aAcheter.typeDeBienImmobilier}}</td>
                         <td>{{aAcheter.prixDemandeAAcheter}}</td>
-                        
+
                     </tr>
                 </tbody>
             </table>
         </div>
-        
+
     </div>
+</div>
