@@ -1,0 +1,21 @@
+#login {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+h5 {
+    background-color: #e3f2fd;
+}
+
+.form-row {
+    margin-top: 15px;
+}
+
+.md-form {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+

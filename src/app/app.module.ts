@@ -61,6 +61,10 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './security/login/login.component';
+import { AccueilPrimaireComponent } from './accueil-primaire/accueil-primaire.component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { BienImmoClientComponent } from './bien-immo-client/bien-immo-client.component';
+import { BienImmoPropComponent } from './bien-immo-prop/bien-immo-prop.component';
 
 
 
@@ -113,7 +117,10 @@ import { LoginComponent } from './security/login/login.component';
     AccueilComponent,
     CarouselComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+    AccueilPrimaireComponent,
+    BienImmoClientComponent,
+    BienImmoPropComponent
   ],
   imports: [
     BrowserModule,
@@ -125,7 +132,8 @@ import { LoginComponent } from './security/login/login.component';
     ReactiveFormsModule,
     HttpClientModule, 
     FormsModule,
-    BrowserAnimationsModule, 
+    BrowserAnimationsModule,
+    BsDatepickerModule.forRoot(), 
     
   ],
   providers: [
