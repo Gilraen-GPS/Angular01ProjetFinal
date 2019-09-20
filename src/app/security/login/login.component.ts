@@ -32,6 +32,8 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  
+
   indiceTrue(){
     this.appComponent.indiceTrue();
   }

@@ -46,7 +46,7 @@
       </div>
     </div>
     <div class="btn-group mr-3" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-      <button class="btn btn-outline-primary" ngbDropdownToggle>Propriétaires</button>
+      <button ngbDropdownToggle>Propriétaires</button>
       <div class="dropdown-menu" ngbDropdownMenu>
         <a [routerLink]="['/proprietaire/add']" ngbDropdownItem>Ajouter un propriétaire</a>
         <a [routerLink]="['/proprietaire/update']" ngbDropdownItem>Modifier un propriétaire</a>
@@ -76,4 +76,5 @@
       </div>
     </div>
   </div>
+
 </nav>

@@ -1,10 +1,11 @@
 <!-- Material form register -->
+<div class="test">
 <div class="card" id="login">
 
         <h5 class="card-header info-color white-text text-center py-4">
-            <strong>Sign in</strong>
+            <strong>CONNEXION</strong>
         </h5>
-    
+        
         <!--Card content-->
         <div class="card-body px-lg-5 pt-0">
             <!-- Form -->
@@ -12,23 +13,24 @@
                 <div class="form-row">
                     <div class="col">
                         <div class="md-form text-info">
-                            <label for="materialRegisterFormPassword">Identifiant</label>
+                            <label for="materialRegisterFormPassword">IDENTIFIANT</label>
                             <input type="number" id="materialRegisterFormPassword" class="form-control"
                                 aria-describedby="materialRegisterFormPasswordHelpBlock" [(ngModel)]="agent.idAgent" name="pId">
                         </div>
                     </div>
                     <div class="col">
                         <div class="md-form text-info">
-                            <label for="materialRegisterFormPhone">Mot de passe</label>
+                            <label for="materialRegisterFormPhone">MOT DE PASSE</label>
                             <input type="password" id="materialRegisterFormPhone" class="form-control"
                                 aria-describedby="materialRegisterFormPhoneHelpBlock" [(ngModel)]="agent.mdpAgent" name="pMdpAgent">
                         </div>
                     </div>
                 </div>
                 <!-- Sign up button -->
-                <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" (click)="seConnecter()+indiceTrue()">Sign
-                    in</button>
+    
+             <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" (click)="seConnecter()+indiceTrue()">Se connecter </button>
             </form>
+
             <!-- Form -->
     
         </div>
@@ -37,3 +39,10 @@
 
     <h1 *ngIf="indice">Login ou mot de passe incorrect</h1>
     <!-- Material form register -->
+
+    <div class="rightguide">
+
+
+        
+    </div>
+</div>

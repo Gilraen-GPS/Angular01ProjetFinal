@@ -1,8 +1,10 @@
 nav {
-    background-color: #e3f2fd;
+    background-color: #ecdeb8;
     height:15%;
 }
 
 #accueil {
     margin-left: 115px;
 }
+
+button{color :white ; border-color:rgb(32, 30, 43);  background-color:rgb(45, 42, 49); }

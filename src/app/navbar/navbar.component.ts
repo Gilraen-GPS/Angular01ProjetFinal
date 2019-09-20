@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Agent } from 'Angular01ProjetFinal/src/app/modeles/agent';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  agent: Agent;
   constructor() { }
 
   ngOnInit() {
+       
+
   }
 
 }

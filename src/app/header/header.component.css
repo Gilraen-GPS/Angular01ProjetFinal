@@ -1,5 +1,5 @@
 nav {
-    background-color: #e3f2fd;
+    background-color: #ecdeb8;
     border-radius: 5px;
 }
 
@@ -44,4 +44,8 @@ a{
 h3{
     font-style : normal;
 
+}
+
+.test1{
+    background-color: #ecdeb8;
 }

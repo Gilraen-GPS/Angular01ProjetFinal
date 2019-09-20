@@ -3,6 +3,7 @@ import { AAcheterService } from '../services/a-acheter.service';
 import { Router } from '@angular/router';
 import { AAcheter } from '../modeles/aacheter';
 import { ALouerService } from '../services/a-louer.service';
+import { Agent } from 'Angular01ProjetFinal/src/app/modeles/agent';
 
 @Component({
   selector: 'app-accueil',
@@ -16,11 +17,14 @@ indice2 : boolean = false;
 aAcheters : any;
 page=1;
 pageSize=4;
-
+agent : Agent;
   constructor(private achatService : AAcheterService, private router: Router, private louerService : ALouerService) { }
 
   ngOnInit() {
     this.indice2 = false;
+    this.agent=JSON.parse(localStorage.getItem('currentAgent'));
+
+        console.log(this.agent)
   }
 
   rechercherBretagne(){
@@ -215,5 +219,6 @@ pageSize=4;
       }
     })
   }
+
 
 }
