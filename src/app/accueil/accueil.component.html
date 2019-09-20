@@ -117,13 +117,13 @@
     </div>
 </div>
 
-<!--
+
 <div *ngIf="indice">
     <div class="row">
         <h3>Liste des biens à louer</h3>
     </div>
     <div class="row" id="table">
-        <table class="table table-striped" *ngFor="let aLouer of alouers">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th scope="col">#ID</th>
@@ -132,38 +132,41 @@
                     <th scope="col">Localisation du bien</th>
                     <th scope="col">Date de disponibilité du bien</th>
                     <th scope="col">Revenu Cadastral</th>
+                    <th scope="col">Pays</th>
                     <th scope="col">Photo</th>
                     <th scope="col">Numéro de facture</th>
-                    <th scope="col">Date de facture</th>                 
+                    <th scope="col">Date de facture</th>
+                    <th scope="col">Numéro Affaire du bien</th>
                     <th scope="col">Type de bien</th>
-                    <th scope="col">Prix demandé</th>
-                    <th scope="col">Etat du bien</th>
+                    <th scope="col">Caution à louer</th>
+                    <th scope="col">Loyer à louer</th>
+                    <th scope="col">Charges à louer</th>
+                    <th scope="col">Bail à louer</th>
+                    <th scope="col">Garnitures à louer</th>
                 </tr>
             </thead>
             <tbody>
-                <tr >
-                    <td>{{aAcheter.idBienImmobilier}}</td>
-                    <td>{{aAcheter.statutBienImmobilier}}</td>
-                    <td>{{aAcheter.dateSoumissionBienImmobilier}}</td>
-                    <td>{{aAcheter.localisationBienImmobilier}}</td>
-                    <td>{{aAcheter.dateDispoBienImmobilier}}</td>
-                    <td>{{aAcheter.revenuCadastralBienImmobilier}}</td>                   
-                    <td>{{aAcheter.photo}}</td>    
-                    <td>{{aAcheter.numeroFactureBienImmobilier}}</td>
-                    <td>{{aAcheter.dateFactureBienImmobilier}}</td>                   
-                    <td>{{aAcheter.typeDeBienImmobilier}}</td>
-                    <td>{{aAcheter.prixDemandeAAcheter}}</td>
-                    <td>{{aAcheter.etatAAcheter}}</td>
+                <tr *ngFor="let aLouer of aLouers">
+                    <td>{{aLouer.idBienImmobilier}}</td>
+                    <td>{{aLouer.statutBienImmobilier}}</td>
+                    <td>{{aLouer.dateSoumissionBienImmobilier}}</td>
+                    <td>{{aLouer.localisationBienImmobilier}}</td>
+                    <td>{{aLouer.dateDispoBienImmobilier}}</td>
+                    <td>{{aLouer.revenuCadastralBienImmobilier}}</td>
+                    <td>{{aLouer.paysBienImmobilier}}</td>
+                    <td>{{aLouer.photo}}</td>    
+                    <td>{{aLouer.numeroFactureBienImmobilier}}</td>
+                    <td>{{aLouer.dateFactureBienImmobilier}}</td>
+                    <td>{{aLouer.numeroAffaireBienImmobilier}}</td>
+                    <td>{{aLouer.typeDeBienImmobilier}}</td>
+                    <td>{{aLouer.cautionALouer}}</td>
+                    <td>{{aLouer.loyerALouer}}</td>
+                    <td>{{aLouer.chargesALouer}}</td>
+                    <td>{{aLouer.bailALouer}}</td>
+                    <td>{{aLouer.garnituresALouer}}</td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div class="row">
-    </div>
-<<<<<<< HEAD
-</div>
 
--->
-=======
 </div>
->>>>>>> 4b64ba0440ef22523d0df550a0ab60acff981ca2
