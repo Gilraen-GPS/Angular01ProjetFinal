@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Visite } from '../modeles/visite';
 
 @Injectable({
@@ -7,27 +7,34 @@ import { Visite } from '../modeles/visite';
 })
 export class VisiteService {
 
-  url : string = "http://localhost:8082/01_Agence_Immobiliere/rest/contrat/";
+    header=new HttpHeaders;
+
+  url : string = "http://localhost:8082/01_Agence_Immobiliere/rest/visite/";
 
   constructor(private httpClient:HttpClient) { }
 
-  addVisite(visite : Visite){
-      return this.httpClient.post<Visite>(this.url+"add", visite);
+  addVisite(visite : Visite,idImmobil:number,type:string){
+      this.header.set('Access-Control-Allow-Origin','*')
+      return this.httpClient.post<Visite>(this.url+"add?type="+type+"&idImmobil="+idImmobil, visite, {headers:this.header,observe:'response'});
   }
 
   updateVisite(visite : Visite){
-      return this.httpClient.put<Visite>(this.url+"update", visite, {observe : 'response'});
+    this.header.set('Access-Control-Allow-Origin','*')
+      return this.httpClient.put<Visite>(this.url+"update", visite, {observe : 'response', headers:this.header});
   }
 
   deleteVisite(idVisite : number){
-      return this.httpClient.delete(this.url+"delete/"+idVisite, {observe : 'response'});
+    this.header.set('Access-Control-Allow-Origin','*')
+      return this.httpClient.delete(this.url+"delete/"+idVisite, {observe : 'response', headers:this.header});
   }
 
   getAllVisite(){
-      return this.httpClient.get(this.url+"getAll");
+    this.header.set('Access-Control-Allow-Origin','*')
+      return this.httpClient.get(this.url+"getAll", {headers:this.header});
   }
 
   getByIdVisite(idVisite : number){
-      return this.httpClient.get<Visite>(this.url+"getById/"+idVisite);
+    this.header.set('Access-Control-Allow-Origin','*')
+      return this.httpClient.get<Visite>(this.url+"getById/"+idVisite, {headers:this.header});
   }
 }

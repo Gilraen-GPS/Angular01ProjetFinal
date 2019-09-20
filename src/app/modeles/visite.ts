@@ -1,4 +1,4 @@
 export class Visite {
-    private idVisite : number;
-    private dateVisite : string;
+    public idVisite : number;
+    public dateVisite : string;
 }

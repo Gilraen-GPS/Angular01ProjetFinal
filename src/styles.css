@@ -1,3 +1,8 @@
+
+/* import de css pour le clandar*/
+@import '~@fullcalendar/core/main.css';
+@import '~@fullcalendar/daygrid/main.css';
+
 html {
   height: 100%;
 }

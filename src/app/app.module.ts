@@ -55,8 +55,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
-
-
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -126,7 +125,13 @@ import { GetByRegionComponent } from './components/aAcheter/get-by-region/get-by
     AccueilPrimaireComponent,
     BienImmoClientComponent,
     BienImmoPropComponent,
+
+    GetByRegionComponent,
+
+
     GetByRegionComponent
+
+
   ],
   imports: [
     BrowserModule,
@@ -139,7 +144,11 @@ import { GetByRegionComponent } from './components/aAcheter/get-by-region/get-by
     HttpClientModule, 
     FormsModule,
     BrowserAnimationsModule,
+    FullCalendarModule 
+
     
+
+
     
   ],
   providers: [

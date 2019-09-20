@@ -7,7 +7,7 @@ import { ALouer } from '../modeles/alouer';
   providedIn: 'root'
 })
 export class ALouerService {
-  url : string = "http://localhost:8082/01_Agence_Immobiliere/rest/contrat/";
+  url : string = "http://localhost:8082/01_Agence_Immobiliere/rest/aLouer/";
 
   constructor(private httpClient:HttpClient) { }
 
@@ -19,15 +19,15 @@ export class ALouerService {
       return this.httpClient.put<ALouer>(this.url+"update", aLouer, {observe : 'response'});
   }
 
-  deleteALouer(idVisite : number){
-      return this.httpClient.delete(this.url+"delete/"+idVisite, {observe : 'response'});
+  deleteALouer(idALouer : number){
+      return this.httpClient.delete(this.url+"delete/"+idALouer, {observe : 'response'});
   }
 
   getAllALouer(){
       return this.httpClient.get(this.url+"getAll");
   }
 
-  getByIdALouer(idVisite : number){
-      return this.httpClient.get<ALouer>(this.url+"getById/"+idVisite);
+  getByIdALouer(idALouer : number){
+      return this.httpClient.get<ALouer>(this.url+"getById/"+idALouer);
   }
 }
