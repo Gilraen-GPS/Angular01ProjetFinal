@@ -30,4 +30,8 @@ export class ALouerService {
   getByIdALouer(idALouer : number){
       return this.httpClient.get<ALouer>(this.url+"getById/"+idALouer);
   }
+
+  getByRegionALouer(region : string){
+    return this.httpClient.get<ALouer>(this.url+"getRegionById/"+region);
+  }
 }
