@@ -46,3 +46,15 @@
         <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="aAcheters.length"></ngb-pagination>
     </div>
 </div>
+<div>
+        <div class="card" style="width: 18rem;" *ngFor="let aAcheter of aAcheters">
+                <div class="card-header">
+                    <p>{{aAcheter.localisationBienImmobilier}}</p>
+                    <p>{{aAcheter.paysBienImmobilier}}</p>
+                </div>
+                <img src="{{aAcheter.photo}}"/>
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+</div>

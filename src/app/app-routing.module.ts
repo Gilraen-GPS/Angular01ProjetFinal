@@ -49,7 +49,7 @@ import { BienImmoPropComponent } from './bien-immo-prop/bien-immo-prop.component
 
 
 const routes: Routes = [
-  {path:"", component:AccueilComponent},
+  {path:"", component:AccueilPrimaireComponent},
   {path:"welcome-primaire", component:AccueilPrimaireComponent},
   {path:"welcome", component:AccueilComponent},
   {path:"login", component:LoginComponent},

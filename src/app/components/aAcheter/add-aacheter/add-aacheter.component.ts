@@ -4,6 +4,11 @@ import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { FormControl, Validators } from '@angular/forms';
 import { AAcheterService } from 'src/app/services/a-acheter.service';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+
+class ImageSnippet {
+  constructor(public src : string, public file : File){}
+}
 
 @Component({
   selector: 'app-add-aacheter',
@@ -13,8 +18,9 @@ import { Router } from '@angular/router';
 export class AddAAcheterComponent implements OnInit {
 
   aAcheter:AAcheter = new AAcheter();
+  selectedFile: ImageSnippet;
   
-  constructor(private router : Router, private aAcheterService : AAcheterService) { }
+  constructor(private router : Router, private aAcheterService : AAcheterService, private httpClient : HttpClient) { }
 
   ngOnInit() {
   }
@@ -27,4 +33,14 @@ export class AddAAcheterComponent implements OnInit {
     });
   }
 
+  processFile(imageInput : any){
+    const file : File = imageInput.files[0];
+    const reader = new FileReader();
+
+    reader.addEventListener('load', (event:any) => {
+      this.selectedFile = new ImageSnippet(event.target.result, file);
+    });
+
+    reader.readAsDataURL(file);
+  }
 }

@@ -6,7 +6,7 @@
     <!--Card content-->
     <div class="card-body px-lg-5 pt-0">
         <!-- Form -->
-        <form class="text-center" style="color: #757575;">
+        <form class="text-center" style="color: #757575;" #addAAcheterForm=ngForm>
             <div class="form-group">
                 <label for="idNomProp">Statut</label>
                 <input type="text" class="form-control" id="idNomProp" placeholder="Nom du proprietaire"
@@ -39,8 +39,13 @@
             </div>
             <div class="form-group">
                 <label for="idAddrProp">Photo du bien</label>
-                <input type="text" class="form-control" id="idAddrProp" placeholder="Adresse du proprietaire"
-                    [(ngModel)]="aAcheter.photo" name="pAddrProp" />
+                <input #imageInput type="file" accept="image/*" (change)="processFile(imageInput)" class="form-control" id="idAddrProp"
+                    [(ngModel)]="aAcheter.photo" name="pPhoto" />
+            </div>
+            <div class="form-group">
+                <label for="idAddrProp">Region du bien</label>
+                <input #imageInput type="file" accept="image/*" (change)="processFile(imageInput)" class="form-control" id="idAddrProp"
+                    [(ngModel)]="aAcheter.region" name="pRegion" />
             </div>
             <div class="form-group">
                 <label for="idAddrProp">Numero de facture du bien</label>
@@ -65,7 +70,7 @@
             <div class="form-group">
                 <label for="idAddrProp">Prix du bien</label>
                 <input type="text" class="form-control" id="idAddrProp" placeholder="Adresse du proprietaire"
-                    [(ngModel)]="aAcheter.prixDemandeAAcheter" name="pAddrProp" />
+                    [(ngModel)]="aAcheter.prixDemandeAAcheter" name="pAddrProp" required/>
             </div>
             <div class="form-group">
                 <label for="idAddrProp">Etat du bien</label>
@@ -73,7 +78,7 @@
                     [(ngModel)]="aAcheter.etatAAcheter" name="pAddrProp" />
             </div>
             <!-- Sign up button -->
-            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" (click)="ajouter()">Ajouter
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" (click)="ajouter()" [disabled]="!addAAcheterForm.valid">Ajouter
                 le Proprietaire</button>
         </form>
         <!-- Form -->
