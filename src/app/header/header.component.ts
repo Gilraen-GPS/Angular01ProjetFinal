@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
 
   seDeconnecter(){
     this.authentificationService.logout();
-    this.router.navigate(['/welcome'])
+    this.router.navigate(['/welcome-primaire'])
   }
 
   indiceFalse(){

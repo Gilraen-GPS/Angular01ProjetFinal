@@ -1,1 +1,35 @@
-<p>update-visite works!</p>
+<!-- Material form register -->
+<div class="card" id="login">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Modifier une visite</strong>
+    </h5>
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" (submit)="modifierVisite()">
+
+                <div class="form-group" >
+                        <label for="idVisite">ID visite</label>
+                        <input type="number" class="form-control" id="idVisite" placeholder="ID visite" [(ngModel)]="visite.idVisite" name="pId"/>
+                    </div>
+            <div class="form-group" >
+                <label for="dateVisite">Date de la visite</label>
+                <input type="text" class="form-control" id="dateVisite" placeholder="Date de la visite" [(ngModel)]="visite.dateVisite" name="pDateVisite"/>
+            </div>
+            <div class="form-group" >
+                <label for="idBienImmoblier">ID bien immobilier</label>
+                <input type="number" class="form-control" id="idBienImmoblier" placeholder="ID bien immoblier" [(ngModel)]="visite.idBienImmoblier" name="pIdBienImmobilier"/>
+            </div>
+    
+            <!-- Sign up button -->
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Modifier la visite</button>
+        </form>
+        <!-- Form -->
+
+    </div>
+
+</div>
+<!-- Material form register --> 

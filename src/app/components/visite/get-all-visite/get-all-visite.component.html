@@ -1,1 +1,38 @@
-<p>get-all-visite works!</p>
+<!-- <div>
+    <div class="row">
+        <h3>Liste des visites</h3>
+    </div>
+    <div class="row" id="table">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#ID visite</th>
+                    <th scope="col">Date visite</th>
+                    <th scope="col">ID bien immobilier</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let visite of visites" >
+                    <td>{{visite.idVisite}}</td>
+                    <td>{{visite.dateVisite}}</td>
+                    <td>{{visite.idBienImmobilier}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   
+</div> -->
+
+<div class='app-calendar' *ngIf="calendarVisible">
+    <full-calendar deepChangeDetection="true"
+      #calendar
+      defaultView="dayGridMonth"
+      [header]="{
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+      }"
+      [plugins]="calendarPlugins"
+      [weekends]="calendarWeekends"
+      [events]="calendarEvents"
+    ></full-calendar>

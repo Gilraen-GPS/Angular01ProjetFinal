@@ -1,1 +1,29 @@
-<p>delete-alouer works!</p>
+<!-- Material form register -->
+<div class="card" id="login">
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Supprimer un bien à louer</strong>
+    </h5>
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;">
+            <div class="form-row">
+                <div class="col-8">
+                    <!-- First name -->
+                    <div class="md-form text-info waves-effect z-depth-0">
+                        <label for="materialRegisterFormFirstName">Id du bien</label>
+                        <input type="text" id="materialRegisterFormFirstName" class="form-control"
+                            [(ngModel)]="idBienImmobilier" name="pIdBienImmobilier">
+                    </div>
+                </div>
+            </div>
+            <!-- Sign up button -->
+            <div class="col-8">
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit"
+                (click)="supprimerALouer()">Supprimer le bien à louer</button>
+            </div>
+        </form>
+        <!-- Form -->
+    </div>
+</div>
+<!-- Material form register -->

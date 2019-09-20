@@ -43,12 +43,19 @@ import { GetByIdVisiteComponent } from './components/visite/get-by-id-visite/get
 import { GetAllVisiteComponent } from './components/visite/get-all-visite/get-all-visite.component';
 import { LoginComponent } from './security/login/login.component';
 import { AuthGuard } from './security/services/auth.guard';
+import { AccueilPrimaireComponent } from './accueil-primaire/accueil-primaire.component';
+import { BienImmoClientComponent } from './bien-immo-client/bien-immo-client.component';
+import { BienImmoPropComponent } from './bien-immo-prop/bien-immo-prop.component';
 
 
 const routes: Routes = [
   {path:"", component:AccueilComponent},
+  {path:"welcome-primaire", component:AccueilPrimaireComponent},
   {path:"welcome", component:AccueilComponent},
   {path:"login", component:LoginComponent},
+
+  {path:"aAcheterClient", component:BienImmoClientComponent},
+  {path:"ajoutBienProp", component:BienImmoPropComponent},
 
   {path:"aAcheter/add", component:AddAAcheterComponent, canActivate:[AuthGuard]},
   {path:"aAcheter/update", component:UpdateAAcheterComponent, canActivate:[AuthGuard]},

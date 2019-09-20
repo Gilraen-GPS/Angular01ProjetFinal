@@ -1,42 +1,43 @@
 <!-- Material form register -->
 <div class="card" id="login">
 
-        <h5 class="card-header info-color white-text text-center py-4">
-            <strong>Ajouter un Contrat</strong>
-        </h5>
-    
-        <!--Card content-->
-        <div class="card-body px-lg-5 pt-0">
-    
-            <!-- Form -->
-            <form class="text-center" style="color: #757575;" action="#!" (submit)="ajouterContrat()">
-    
-                <div class="form-group" >
-                    <label for="idNomCl">Nom du Client</label>
-                    <input type="text" class="form-control" id="idNomContrat" placeholder="Nom du Client" [(ngModel)]="client.nomPersonne" name="pNomCl"/>
-                </div>
-                <div class="form-group" >
-                    <label for="idTelCl">Téléphone Privé</label>
-                    <input type="text" class="form-control" id="idTelContrat" placeholder="Téléphone Privé" [(ngModel)]="client.telephonePrive" name="pTelCl"/>
-                </div>
-                <div class="form-group" >
-                    <label for="idAcquereur">Aquereur</label>
-                    <input type="text" class="form-control" id="idAcquereur" placeholder="Acquereur" [(ngModel)]="client.acquereur" name="pAcquereur"/>
-                </div>
-                <div class="form-group" >
-                    <label for="idAdresseCl">Poids maximal</label>
-                    <input type="text" class="form-control" id="idAdresseCl" placeholder="Adresse du client" [(ngModel)]="client.adresseClient" name="pAdresseCl"/>
-                </div>
-               
-    
-    
-    
-                <!-- Sign up button -->
-                <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Ajouter le client</button>
-            </form>
-            <!-- Form -->
-    
-        </div>
-    
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Ajouter une visite</strong>
+    </h5>
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" (submit)="ajouterVisite()">
+
+            <div class="form-group">
+                <label for="dateVisite">Date visite</label>
+                <input type="text" class="form-control" id="dateVisite" placeholder="Date visite"
+                    [(ngModel)]="visite.dateVisite" name="pDateVisite" />
+            </div>
+            <div class="form-group">
+                <label for="idBienImmobilier">ID bien immobilier</label>
+                <input type="number" class="form-control" id="idBienImmobilier" placeholder="ID bien immobilier"
+                    [(ngModel)]="idImmobil" name="pIdBienImmobilier" />
+            </div>
+            <div class="custom-control custom-radio">
+                <input id="male" type="radio" class="custom-control-input" value="achat"  [(ngModel)]="type" name="ttt">
+                <label class="custom-control-label" for="male">Achat</label>
+            </div>
+
+            <div class="custom-control custom-radio">
+                <input id="female" type="radio" class="custom-control-input" value="location" [(ngModel)]="type" name="ttt">
+                <label class="custom-control-label" for="female">Location </label>
+            </div>
+
+            <!-- Sign up button -->
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Ajouter
+                la visite</button>
+        </form>
+        <!-- Form -->
+
     </div>
-    <!-- Material form register --> 
+
+</div>
+<!-- Material form register -->
