@@ -13,6 +13,8 @@ export class AccueilComponent implements OnInit {
 indice: boolean=false;
 indice2 : boolean = false;
 aAcheters : any;
+page=1;
+pageSize=4;
 
   constructor(private achatService : AAcheterService, private router: Router) { }
 

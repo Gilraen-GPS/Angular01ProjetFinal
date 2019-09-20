@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   constructor(private authService : AuthentificationService, private router : Router, private route : ActivatedRoute, private appComponent : AppComponent) { }
 
   ngOnInit() {
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/welcome';
   }
 
   seConnecter () {

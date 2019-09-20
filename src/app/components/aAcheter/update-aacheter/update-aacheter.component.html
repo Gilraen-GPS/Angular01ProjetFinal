@@ -9,77 +9,88 @@
     <div class="card-body px-lg-5 pt-0">
 
         <!-- Form -->
-        <form class="text-center" style="color: #757575;" (submit)="modifier()">
-
-            <div class="form-group">
-                <label for="idProp">#ID Bien</label>
-                <input type="number" class="form-control" id="idProp"
-                    [(ngModel)]="aAcheter.idBienImmobilier" name="pIdBienImmobilier"/>
+        <form class="text-center" style="color: #757575;">
+            <div class="row">
+                <div class="col-3">
+                        <label for="idProp">#ID Bien</label>
+                        <input type="number" class="form-control" id="idProp" [(ngModel)]="aAcheter.idBienImmobilier"
+                            name="pIdBienImmobilier" />
+                </div>
+                <div class="col-3">
+                        <label for="idTelProp">Date Soumission du bien</label>
+                        <input type="text" class="form-control" id="idTelProp"
+                            [(ngModel)]="aAcheter.dateSoumissionBienImmobilier" name="pDateSoumission" />
+                </div>
             </div>
-            <div class="form-group">
-                <label for="idTelProp">Date Soumission du bien</label>
-                <input type="text" class="form-control" id="idTelProp"
-                    [(ngModel)]="aAcheter.dateSoumissionBienImmobilier" name="pDateSoumission" />
+            <div class="row">
+                <div class="col-3">
+                        <label for="idTelProProp">Localisation du bien</label>
+                        <input type="text" class="form-control" id="idTelProProp"
+                            [(ngModel)]="aAcheter.localisationBienImmobilier" name="pLocalisationBien" />
+                </div>
+                <div class="col-3">
+                        <label for="idAddrProp">Date de disponibilité du bien</label>
+                        <input type="text" class="form-control" id="idAddrProp"
+                            [(ngModel)]="aAcheter.dateDispoBienImmobilier" name="pDateDispo" />
+                </div>
             </div>
-            <div class="form-group">
-                <label for="idTelProProp">Localisation du bien</label>
-                <input type="text" class="form-control" id="idTelProProp"
-                    [(ngModel)]="aAcheter.localisationBienImmobilier" name="pLocalisationBien" />
+            <div class="row">
+                <div class="col-3">
+                        <label for="idAddrProp">Revenu Cadastral du bien</label>
+                        <input type="text" class="form-control" id="idAddrProp"
+                            [(ngModel)]="aAcheter.revenuCadastralBienImmobilier" name="pRevenuCadastral" />
+                </div>
+                <div class="col-3">
+                        <label for="idAddrProp">Pays du bien</label>
+                        <input type="text" class="form-control" id="idAddrProp"
+                            [(ngModel)]="aAcheter.paysBienImmobilier" name="pPays" />
+                </div>
             </div>
-            <div class="form-group">
-                <label for="idAddrProp">Date de disponibilité du bien</label>
-                <input type="text" class="form-control" id="idAddrProp"
-                    [(ngModel)]="aAcheter.dateDispoBienImmobilier" name="pDateDispo" />
+            <div class="row">
+                <div class="col-3">
+                        <label for="idAddrProp">Photo du bien</label>
+                        <input type="text" class="form-control" id="idAddrProp" [(ngModel)]="aAcheter.photo"
+                            name="pPhoto" />
+                </div>
+                <div class="col-3">
+                        <label for="idAddrProp">Numero de facture du bien</label>
+                        <input type="text" class="form-control" id="idAddrProp"
+                            [(ngModel)]="aAcheter.numeroFactureBienImmobilier" name="pNumFacture" />
+                </div>
             </div>
-            <div class="form-group">
-                <label for="idAddrProp">Revenu Cadastral du bien</label>
-                <input type="text" class="form-control" id="idAddrProp"
-                    [(ngModel)]="aAcheter.revenuCadastralBienImmobilier" name="pRevenuCadastral" />
+            <div class="row">
+                <div class="col-3">
+                        <label for="idAddrProp">Date de facture du bien</label>
+                        <input type="text" class="form-control" id="idAddrProp"
+                            [(ngModel)]="aAcheter.dateFactureBienImmobilier" name="pDateFacture" />
+                </div>
+                <div class="col-3">
+                        <label for="idAddrProp">Numéro affaire du bien</label>
+                        <input type="text" class="form-control" id="idAddrProp"
+                            [(ngModel)]="aAcheter.numeroAffaireBienImmobilier" name="pNumAffaire" />
+                </div>
             </div>
-            <div class="form-group">
-                <label for="idAddrProp">Pays du bien</label>
-                <input type="text" class="form-control" id="idAddrProp"
-                    [(ngModel)]="aAcheter.paysBienImmobilier" name="pPays" />
-            </div>
-            <div class="form-group">
-                <label for="idAddrProp">Photo du bien</label>
-                <input type="text" class="form-control" id="idAddrProp"
-                    [(ngModel)]="aAcheter.photo" name="pPhoto" />
-            </div>
-            <div class="form-group">
-                <label for="idAddrProp">Numero de facture du bien</label>
-                <input type="text" class="form-control" id="idAddrProp"
-                    [(ngModel)]="aAcheter.numeroFactureBienImmobilier" name="pNumFacture" />
-            </div>
-            <div class="form-group">
-                <label for="idAddrProp">Date de facture du bien</label>
-                <input type="text" class="form-control" id="idAddrProp"
-                    [(ngModel)]="aAcheter.dateFactureBienImmobilier" name="pDateFacture" />
-            </div>
-            <div class="form-group">
-                <label for="idAddrProp">Numéro affaire du bien</label>
-                <input type="text" class="form-control" id="idAddrProp"
-                    [(ngModel)]="aAcheter.numeroAffaireBienImmobilier" name="pNumAffaire" />
-            </div>
-            <div class="form-group">
-                <label for="idAddrProp">Type du bien</label>
-                <input type="text" class="form-control" id="idAddrProp"
-                    [(ngModel)]="aAcheter.typeDeBienImmobilier" name="pType" />
-            </div>
-            <div class="form-group">
-                <label for="idAddrProp">Prix du bien</label>
-                <input type="text" class="form-control" id="idAddrProp"
-                    [(ngModel)]="aAcheter.prixDemandeAAcheter" name="pPrix" required/>
-            </div>
-            <div class="form-group">
-                <label for="idAddrProp">Etat du bien</label>
-                <input type="text" class="form-control" id="idAddrProp"
-                    [(ngModel)]="aAcheter.etatAAcheter" name="pEtat" />
+            <div class="row">
+                <div class="col-3">
+                        <label for="idAddrProp">Type du bien</label>
+                        <input type="text" class="form-control" id="idAddrProp"
+                            [(ngModel)]="aAcheter.typeDeBienImmobilier" name="pType" />
+                </div>
+                <div class="col-3">
+                        <label for="idAddrProp">Prix du bien</label>
+                        <input type="text" class="form-control" id="idAddrProp"
+                            [(ngModel)]="aAcheter.prixDemandeAAcheter" name="pPrix" required />
+                </div>
+                <div class="col-3">
+                        <label for="idAddrProp">Etat du bien</label>
+                        <input type="text" class="form-control" id="idAddrProp" [(ngModel)]="aAcheter.etatAAcheter"
+                            name="pEtat" />
+                </div>
             </div>
 
             <!-- Sign up button -->
-            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0"
-                type="submit">Modifier le bien</button>
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit"
+                (click)="modifier()">Modifier le bien</button>
         </form>
         <!-- Form -->
 

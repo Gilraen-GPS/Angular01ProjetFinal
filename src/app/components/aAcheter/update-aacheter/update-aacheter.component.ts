@@ -24,7 +24,7 @@ export class UpdateAAcheterComponent implements OnInit {
   }
 
 
-  modifierProp() {
+  modifier() {
     this.aAcheterService.updateAAcheter(this.aAcheter).subscribe(reponse => {
       if (reponse.status == 200) {
         this.router.navigate(['/aAcheter/getAll']);
